@@ -1,8 +1,12 @@
 * {
 }
 
+.appBar {
+  position: relative;
+}
+
 div {
-  border: solid 0.5px;
+  /* border: solid 0.5px; */
 }
 
 .header {
@@ -10,7 +14,7 @@ div {
   font-family: 'Courier New';
 }
 
-.main-content {
+main {
   font-family: 'Noto Sans Japanese', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   margin: 0 30px;
 }
@@ -18,15 +22,20 @@ div {
 .sub-content {
   padding: 5px;
   margin: 5px;
-  height: 100px;
+  /* height: 100px; */
+}
+
+.sub-content-body {
+  padding-left: 50px;
 }
 
 .content-title {
   font-family: 'Courier New';
   font-size: 18px;
+  padding-left: 20px;
 }
 
-.footer {
+footer {
   font-size: 10px;
   font-color: grey;
   text-align: center;
