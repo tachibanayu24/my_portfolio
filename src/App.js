@@ -22,11 +22,11 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { faJs, faReact, faPython, faAws, faSlackHash, faLinux } from '@fortawesome/free-brands-svg-icons';
+import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faDatabase, faEnvelope, faAt } from '@fortawesome/free-solid-svg-icons';
+import { faJs, faReact, faPython, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro);
-library.add(fab, faJs, faReact, faPython, faDatabase, faAws, faSlackHash, faLinux);
+library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faEnvelope, faAt);
+library.add(fab, faJs, faReact, faPython, faDatabase, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub);
 
 
 class App extends Component {
@@ -36,51 +36,59 @@ class App extends Component {
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
         title:'タイトル1',
+        date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
       },
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
         title:'タイトル2',
+        date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
       },
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
         title:'タイトル3',
+        date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
       },
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
         title:'タイトル4',
+        date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
       },
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
         title:'タイトル5',
+        date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
       },
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
         title:'タイトル6',
+        date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
       },
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
         title:'タイトル7',
+        date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
       },
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
         title:'タイトル8',
+        date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
       },
     ]
 
     return (
       <React.Fragment>
-        <AppBar position="static" color="default">
+        <AppBar position="sticky" style={{backgroundColor: '#022B36E0'}}>
         <Toolbar>
-          <Typography variant="title" color="inherit" style={{ fontSize: 18, fontFamily: "Courier New", fontWeight: 900}} noWrap>
-            <span style={{color: '#1E90FF' }}>/YutoTachibana</span> <span style={{ color: '#FF6347' }}>❯</span><span style={{ color: '#A9A9A9'}}>❯❯ Portfolio_</span>
+          <Typography variant="title" color="inherit" style={{ fontSize: 18, fontFamily: 'Monaco', fontWeight: 900}} noWrap>
+            <span style={{color: '#1E90FF' }}>~/YutoTachibana</span> <span style={{ color: '#FF6347' }}>❯</span><span style={{ color: '#A9A9A9'}}>❯❯ Portfolio<span className="blink">_</span></span>
           </Typography>
         </Toolbar>
         </AppBar>
@@ -99,12 +107,16 @@ class App extends Component {
               </Grid>
               <Grid item lg={10} md={10} xs={12}>
                 <div className="sub-content-body">
-                  <p>都内在住のテック好きな男子です。</p>
+                  <p>はじめまして。立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank">@tachibanayu24</a>)と申します。<br />
+                    都内在住のテック好きな男子です。</p>
                   <p>家庭の事情で高校を1年で中退して肉体労働者になりましたが、お金をためて高卒認定を取得し、都内の大学(工学部)へ進学。<br />
                     大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。</p>
                   <p>2018年4月に港区の大手通信系SIerに新卒入社し、そこではビジネス開発のお仕事をしています。<br />
                     業務ではあまりコードを書く機会を作れないので、プライベートでよくコーディングしています。<br />
                     一人称でサービス開発に携われるような技術を身につけることを目指して日々勉強中です。
+                  </p>
+                  <p>
+                    ファッション、将棋、野球が好きです。
                   </p>
                 </div>
           </Grid>
@@ -136,7 +148,7 @@ class App extends Component {
                   <img src={require('./img/rails.png')} style={{height: 63}} />
                   <span className="skill-name">Ruby on Rails</span>
                     <span className="skill-details">
-                      簡単なWebアプリをいくつか開発しました。
+                      RailsとMySQLでWebアプリをいくつか開発しました。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
@@ -184,7 +196,7 @@ class App extends Component {
                   <FontAwesomeIcon icon={['fab', 'github-alt']} className="icons fa-4x" style={{color: '#778899'}} />
                   <span className="skill-name">GitHub</span>
                     <span className="skill-details">
-                      個人開発やハッカソンでよくホスティングとして使っています。
+                      個人開発やハッカソンでよく使っています。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
@@ -198,14 +210,14 @@ class App extends Component {
                   <FontAwesomeIcon icon={['fab', 'slack-hash']} className="icons fa-4x" style={{color: '#3CB371'}} />
                   <span className="skill-name">Slack</span>
                     <span className="skill-details">
-                      ベンチャー時代、Slackを社内に導入する業務を担当しました。簡単なアプリも開発しました。
+                      ベンチャーにいた頃、Slackを社内に導入する業務を担当しました。簡単なアプリも開発しました。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <img src={require('./img/gas.png')} style={{height: 63}} />
                   <span className="skill-name">Google Apps Script</span>
                     <span className="skill-details">
-                      ベンチャー時代、社内で利用していたGoogle SpreadsheetにGASを適用して業務改善など行っていました。
+                      ベンチャーにいた頃、SpreadsheetにGASを適用して業務改善を行いました。
                     </span>
                 </Grid>
               </Grid>
@@ -232,19 +244,18 @@ class App extends Component {
                               style={{height: 180}}
                             />
                             <CardContent>
-                              <Typography gutterBottom variant="headline" component="h2">
+                              <Typography style={{fontSize: 16}}>
                                 {cards.title}
                               </Typography>
-                              <Typography component="p">
+                              <Typography variant="body2" component="span">
+                                {cards.date}
+                              </Typography>
+                              <hr />
+                              <Typography variant="body1" component="span">
                                 {cards.body}
                               </Typography>
                             </CardContent>
                           </CardActionArea>
-                          <CardActions>
-                            <Button size="small" color="primary">
-                              More
-                            </Button>
-                          </CardActions>
                         </Card>
                       </Grid>
                     )})
@@ -256,8 +267,45 @@ class App extends Component {
           <div className="sub-content sns">
             <div className="content-title">
               <FontAwesomeIcon className="icons fa-lg" icon="handshake" style={{color: '#4682B4'}} />
-              <span>sns</span>
+              <span>SNS/Contact</span>
               <Divider inset />
+            </div>
+            <div style={{textAlign: 'center', marginTop: 40}}>
+              <Grid container>
+                <Grid item lg={4} md={4} xs={2}></Grid>
+                <Grid item lg={1} md={1} xs={2}>
+                  <a href="https://twitter.com/tachibanayu24" target="_blank">
+                    <FontAwesomeIcon className="icons fa-2x" icon={['fab', 'twitter']} style={{color: '#1E90FF'}} />
+                  </a>
+                </Grid>
+                <Grid item lg={1} md={1} xs={2}>
+                  <a href="https://www.instagram.com/tachibanayu24/" target="_blank">
+                    <FontAwesomeIcon className="icons fa-2x" icon={['fab', 'instagram']} style={{color: '#8B4513'}} />
+                  </a>
+                </Grid>
+                <Grid item lg={1} md={1} xs={2}>
+                  <a href="https://github.com/tachibanayu24" target="_blank">
+                    <FontAwesomeIcon className="icons fa-2x" icon={['fab', 'github']} style={{color: '#2F4F4F'}} />
+                  </a>
+                </Grid>
+                <Grid item lg={1} md={1} xs={2}>
+                  <a href="https://qiita.com/tachibanayu24" target="_blank">
+                    <img src={require('./img/qiita.png')} style={{height: 34}} className="radius25" />
+                  </a>
+                </Grid>
+                <Grid item lg={4} md={4} xs={2}></Grid>
+              </Grid>
+
+              <Grid container>
+                <Grid item lg={4} md={4} xs={1}></Grid>
+                <Grid item lg={1} md={1} xs={2} style={{textAlign: 'right'}} >
+                    <FontAwesomeIcon className="icons fa-2x" icon='envelope' style={{color: '#FF4500'}} />
+                </Grid>
+                <Grid item lg={3} md={3} xs={8} style={{textAlign: 'left', margin: 'auto', color: 'grey'}} >
+                    tachibanayu24<FontAwesomeIcon className="icon fa" icon='at' />gmail.com
+                </Grid>
+                <Grid item lg={4} md={4} xs={1}></Grid>
+              </Grid>
             </div>
           </div>
         </main>

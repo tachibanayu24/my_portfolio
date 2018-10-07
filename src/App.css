@@ -7,6 +7,17 @@
   src:url(./font/mplus-1p-regular.ttf)  format("truetype");
 }
 
+@keyframes blink {
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes blink {
+  50% { opacity: 0.0; }
+}
+.blink {
+  animation: blink 1s step-end infinite;
+  -webkit-animation: blink 1s step-end infinite;
+}
+
 .icons {
   margin-right: 10px;
 }
@@ -16,12 +27,7 @@
 }
 
 div {
-  /* border: solid 0.5px; */
-}
-
-.header {
-  text-align: center;
-  font-family: Monaco, 'Courier New';
+  /* border: solid 0.1px; */
 }
 
 main {
@@ -74,4 +80,8 @@ footer {
   font-size: 12px;
   color: grey;
   text-align: center;
+}
+
+.radius25 {
+  border-radius: 25%;
 }
