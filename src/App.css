@@ -1,4 +1,25 @@
 * {
+  font-waight: 300;
+}
+
+@font-face {
+  font-family: mplus-1p-regular;
+  src:url(./font/mplus-1p-regular.ttf)  format("truetype");
+}
+
+@keyframes blink {
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes blink {
+  50% { opacity: 0.0; }
+}
+.blink {
+  animation: blink 1s step-end infinite;
+  -webkit-animation: blink 1s step-end infinite;
+}
+
+.icons {
+  margin-right: 10px;
 }
 
 .appBar {
@@ -6,37 +27,61 @@
 }
 
 div {
-  /* border: solid 0.5px; */
-}
-
-.header {
-  text-align: center;
-  font-family: Monaco, 'Courier New';
+  /* border: solid 0.1px; */
 }
 
 main {
-  font-family: 'Noto Sans Japanese', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   margin: 40px 20px;
 }
 
 .sub-content {
   padding: 5px;
   margin: 5px;
-  /* height: 100px; */
 }
 
 .content-title {
-  font-family: 'Courier New';
+  font-family: Monaco, 'Courier New';
   font-size: 24px;
-  padding-left: 20px;
+}
+
+.sub-content-image img {
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 50%;
 }
 
 .sub-content-body {
-  padding-left: 50px;
+  padding-left: 15px;
+}
+
+.skills {
+  text-align: center;
+  padding: 5px;
+}
+
+.skill-name {
+  display: block;
+  font-family: Monaco, 'Courier New';
+  font-size: 14px
+}
+
+.skill-details {
+  display: block;
+  font-size: 12px
+}
+
+.cardGrid {
+  margin: 40px 0;
 }
 
 footer {
   font-size: 12px;
   color: grey;
   text-align: center;
+}
+
+.radius25 {
+  border-radius: 25%;
 }
