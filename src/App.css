@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: mplus-1p-regular;
-  src:url(./font/mplus-1p-regular.ttf)  format("truetype");
+  src:url(/static/font/mplus-1p-regular.ttf)  format("truetype");
 }
 
 @keyframes blink {
@@ -53,7 +53,7 @@ main {
 }
 
 .sub-content-body {
-  padding-left: 15px;
+  padding-left: 5px;
 }
 
 .skills {
@@ -76,13 +76,12 @@ main {
   margin: 40px 0;
 }
 
-.overlay {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: black;
-  background-color: white;
+.ref-link {
+  text-decoration: none;
+
 }
+
+a:visited{ text-decoration: none; }
 
 footer {
   font-size: 12px;

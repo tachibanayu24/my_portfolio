@@ -4,9 +4,11 @@ import './App.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import CardActions from '@material-ui/core/CardActions';
+import Button from '@material-ui/core/Button';
+import Chip from '@material-ui/core/Chip';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
@@ -22,45 +24,113 @@ library.add(fab, faJs, faReact, faPython, faDatabase, faAws, faSlackHash, faLinu
 
 class App extends Component {
   render() {
-
     const cards = [
       {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル1',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+        image: "/static/images//works/portfolio.png",
+        title:'Reactでポートフォリオ作成(このページ)',
+        date: '2018/10/8',
+        catLg: 'dev',
+        cat: ['React','Material-UI','farebase',],
+        body: 'はじめてのReact。自身の成果を振り返ったり、モチベーションを保ったりするのに良さそうなので開発しました。フロントエンドの知識をつけたかったのでReactにしました。お気に入りポイントのappBarは、私のMacbookのターミナルのプロンプトを再現しています。',
+        ref: {
+          name: ['test', '', '',],
+          url: ['#', '', '',],
+        },
       },
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル2',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+        title:'迷ったときにAlexaがルーレットしてくれるスキル',
+        date: '2018/10/2',
+        catLg: 'dev',
+        cat: ['Lambda','javaScript','VUI',],
+        body: 'はじめてのVUI/AlexaSkill開発。「Alexa。みんなのルーレットで都道府県やって。」などと命令するとランダムで都道府県を返してくれます。国名や料理名にも対応しています。ダーツの旅的なことをたまにやるので開発してみました。',
+        ref: {
+          name: ['testtest', '', '',],
+          url: ['#', '', '',],
+        },
       },
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル3',
+        title:'暗黙知をMarkdown記法で共有するDjangoアプリ',
+        catLg: 'dev',
+        cat: ['Django','MySQL','EC2',],
         date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー',
+        ref: {
+          name: ['test', '', '',],
+          url: ['#', '', '',],
+        },
+      },
+      {
+        image: "/static/images//works/qiita-django.png",
+        title:'DjangoアプリをAWSにデプロイするクイックリファレンス',
+        date: '2018/9/11',
+        catLg: 'written',
+        cat: ['Django','Nginx','EC2',],
+        body: 'ハッカソン#2の前に、#1でハマりまくったAWSへのデプロイ手順を勉強する意味も込めてQiitaに記事を書いてみました。自分の記事の中では読まれることを意識して書きました。',
+        ref: {
+          name: ['test', '', '',],
+          url: ['#', '', '',],
+        },
       },
       {
         image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル4',
+        title:'仕事が辛い人を応援するWebアプリ',
+        catLg: 'dev',
+        cat: ['Rails','MySQL','EC2',],
         date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー',
+        ref: {
+          name: ['test', '', '',],
+          url: ['#', '', '',],
+        },
       },
       {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル5',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル6',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+        image: "/static/images//works/100daysofcode.png",
+        title:'#100DaysOfCode 開始！',
+        date: '2018/8/1',
+        catLg: 'other',
+        cat: ['','','',],
+        body: '主にTwitterで流行っている?100日間コーディングをしてTwitterで報告するという、マラソンのような活動を始めます。忙しくても基本的には毎日やります。最初80日はインプットしつつ月1ペースでなにか作り、最後20日くらいで自分のWebサービスを作りたいと思います。',
+        ref: {
+          name: ['test', '', '',],
+          url: ['#', '', '',],
+        },
       },
     ]
+    const chips = (cat) => {
+      if(cat === 'dev') {
+        return(
+          <Chip style={{backgroundColor: '#3CB371', color: '#fff', margin: 3 }} label="開発" className="chip" />
+        );
+      } else if(cat === 'written') {
+        return(
+          <Chip style={{backgroundColor: '#1E90FF', color: '#fff', margin: 3 }} label="書きもの" className="chip" />
+        );
+      } else if(cat === 'other') {
+        return(
+          <Chip style={{backgroundColor: 'grey', color: '#fff', margin: 3 }} label="その他" className="chip" />
+        );
+      } else if(cat === undefined || cat === '') {
+      } else {
+        return(
+          <Chip style={{backgroundColor: '#FF8C00', color: '#fff', margin: 3 }} label={cat} className="chip" />
+        );
+      }
+    }
+    const refs = (name, url) => {
+      if(name === undefined || name === '' ) {
+      } else {
+        return(
+          <Button size="small" style={{backgroundColor: '#DAA520', color: '#FFF'}}>
+            <a className="ref-link" href={url}>{name}</a>
+          </Button>
+        );
+      }
+    }
+
+    console.log(cards[0].cat)
+    console.log(cards[0].cat[1])
 
     return (
       <React.Fragment>
@@ -80,7 +150,7 @@ class App extends Component {
             </div>
             <Divider inset />
             <Grid container>
-              <Grid item lg={2} md={2} xs={12}>
+              <Grid item lg={2} md={2} xs={12} style={{margin: 'auto'}}>
                 <div className="sub-content-image">
                   <img src={require('./img/profile.png')} alt="profile" />
                 </div>
@@ -209,33 +279,46 @@ class App extends Component {
               <Divider inset />
             </div>
             <div className="cardGrid">
-              <Grid container spacing={40}>
+              <Grid container>
                 {
                   cards.map(
                     (cards, index) => {
                       return (
-                        <Grid item lg={4} md={6} xs={12} key={index}>
-                          <Card className="card">
-                            <CardActionArea>
+                        <Grid item lg={4} md={4} xs={12} key={index} style={{paddingBottom: 20}}>
+                          <Card className="card" style={{width: 340}}>
                               <CardMedia
                                 className="media"
                                 image={cards.image}
-                                style={{height: 180}}
+                                style={{height: 200, width: 340}}
                               />
 
                               <CardContent>
-                                <Typography style={{fontSize: 16}}>
+                                <Typography style={{fontSize: 16, fontWeight: 600, marginBottom: 5}}>
                                   {cards.title}
                                 </Typography>
                                 <Typography variant="body2" component="span">
-                                  {cards.date}
+                                  <Grid container>
+                                    <Grid item xs={3} style={{margin: 'auto'}}>
+                                      <div>{cards.date}</div>
+                                    </Grid>
+                                    <Grid item xs={9}>
+                                      {chips(cards.catLg)}
+                                      {chips(cards.cat[0])}
+                                      {chips(cards.cat[1])}
+                                      {chips(cards.cat[2])}
+                                    </Grid>
+                                  </Grid>
                                 </Typography>
                                 <hr />
                                 <Typography variant="body1" component="span">
                                   {cards.body}
                                 </Typography>
                               </CardContent>
-                            </CardActionArea>
+                              <CardActions style={{textDecoration: 'none'}}>
+                                {refs(cards.ref.name[0], cards.ref.url[0])}
+                                {refs(cards.ref.name[1], cards.ref.url[1])}
+                                {refs(cards.ref.name[2], cards.ref.url[2])}
+                              </CardActions>
                           </Card>
                         </Grid>
                       );
