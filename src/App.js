@@ -19,20 +19,13 @@ import Divider from '@material-ui/core/Divider';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro } from '@fortawesome/free-solid-svg-icons'
 
-import FaceIcon from '@material-ui/icons/FaceTwoTone';
-import CodeIcon from '@material-ui/icons/CodeTwoTone';
-import BrushIcon from '@material-ui/icons/BrushTwoTone';
-import CameraIcon from '@material-ui/icons/PhotoCameraTwoTone';
-import WhatshotIcon from '@material-ui/icons/WhatshotTwoTone';
-
+library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro);
 
 
 class App extends Component {
   render() {
-    library.add(faStroopwafel)
-
     return (
       <React.Fragment>
         <AppBar position="static" color="default">
@@ -42,10 +35,10 @@ class App extends Component {
           </Typography>
         </Toolbar>
         </AppBar>
-        <main><FontAwesomeIcon icon="stroopwafel" />
+        <main>
           <div className="sub-content bio">
             <div className="content-title">
-              <FaceIcon style={{height: 35, width: 35, marginRight: 10,}} />
+              <FontAwesomeIcon className="icons fa-lg" icon="flushed" style={{color: '#2F4F4F'}} />
               <span>bio</span>
             </div>
             <Divider inset />
@@ -59,29 +52,35 @@ class App extends Component {
           </div>
           <div className="sub-content skill">
             <div className="content-title">
-              <CodeIcon style={{height: 35, width: 35, marginRight: 10,}} />
+              <FontAwesomeIcon className="icons fa-lg" icon="code" style={{color: '#ADFF2F'}} />
               <span>skills</span>
             </div>
             <Divider inset />
-
+              <p>よく使う技術とソフトウェア</p>
+              <Grid container>
+                <Grid item lg={3} md={3} xs={6} className="skills">a</Grid>
+                <Grid item lg={3} md={3} xs={6} className="skills">a</Grid>
+                <Grid item lg={3} md={3} xs={6} className="skills">a</Grid>
+                <Grid item lg={3} md={3} xs={6} className="skills">a</Grid>
+              </Grid>
           </div>
           <div className="sub-content work">
             <div className="content-title">
-              <BrushIcon style={{height: 35, width: 35, marginRight: 10,}} />
+              <FontAwesomeIcon className="icons fa-lg" icon="pen-fancy" style={{color: '#FF6347'}} />
               <span>works/activities</span>
               <Divider inset />
             </div>
           </div>
           <div className="sub-content photo">
             <div className="content-title">
-              <CameraIcon style={{height: 35, width: 35, marginRight: 10,}} />
+              <FontAwesomeIcon className="icons fa-lg" icon="camera-retro" style={{color: '#DDA0DD'}} />
               <span>photos</span>
               <Divider inset />
             </div>
           </div>
           <div className="sub-content sns">
             <div className="content-title">
-              <WhatshotIcon style={{height: 35, width: 35, marginRight: 10,}} />
+              <FontAwesomeIcon className="icons fa-lg" icon="handshake" style={{color: '#4682B4'}} />
               <span>sns</span>
               <Divider inset />
             </div>

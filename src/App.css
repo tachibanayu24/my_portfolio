@@ -7,6 +7,10 @@
   src:url(./font/mplus-1p-regular.ttf)  format("truetype");
 }
 
+.icons {
+  margin-right: 10px;
+}
+
 .appBar {
   position: relative;
 }
@@ -37,6 +41,10 @@ main {
 
 .sub-content-body {
   padding-left: 15px;
+}
+
+.skills {
+  text-align: center;
 }
 
 footer {
