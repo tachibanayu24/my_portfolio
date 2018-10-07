@@ -110,9 +110,11 @@ class App extends Component {
                   <p>はじめまして。立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank">@tachibanayu24</a>)と申します。<br />
                     都内在住のテック好きな男子です。</p>
                   <p>家庭の事情で高校を1年で中退して肉体労働者になりましたが、お金をためて高卒認定を取得し、都内の大学(工学部)へ進学。<br />
-                    大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。</p>
-                  <p>2018年4月に港区の大手通信系SIerに新卒入社し、そこではビジネス開発のお仕事をしています。<br />
-                    業務ではあまりコードを書く機会を作れないので、プライベートでよくコーディングしています。<br />
+                    大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。<br />
+                    2018年4月に港区の大手通信系SIerに新卒入社し、そこではビジネス開発の仕事をしています。
+                  </p>
+                  <p>
+                    業務ではなかなかコードを書く機会を作れないので、プライベートでよくコーディングしています。<br />
                     一人称でサービス開発に携われるような技術を身につけることを目指して日々勉強中です。
                   </p>
                   <p>
@@ -128,7 +130,7 @@ class App extends Component {
               <span>tech skills</span>
             </div>
             <Divider inset />
-              <p>よく使う/勉強中の技術・サービス</p>
+              <p style={{fontWeight: 600}}>よく使う/勉強中の技術・サービス</p>
               <Grid container>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'js']} className="icons fa-4x" style={{color: '#FFD700'}} />
@@ -236,6 +238,7 @@ class App extends Component {
                     return (
                       <Grid item key="index" sm={6} md={4} lg={3}>
                         <Card className="card">
+
                           <CardActionArea>
                             <CardMedia
                               className="media"
@@ -256,6 +259,7 @@ class App extends Component {
                               </Typography>
                             </CardContent>
                           </CardActionArea>
+
                         </Card>
                       </Grid>
                     )})
@@ -296,7 +300,7 @@ class App extends Component {
                 <Grid item lg={4} md={4} xs={2}></Grid>
               </Grid>
 
-              <Grid container>
+              <Grid container style={{marginTop: 50 }}>
                 <Grid item lg={4} md={4} xs={1}></Grid>
                 <Grid item lg={1} md={1} xs={2} style={{textAlign: 'right'}} >
                     <FontAwesomeIcon className="icons fa-2x" icon='envelope' style={{color: '#FF4500'}} />
