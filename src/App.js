@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './App.css';
 
-import classNames from 'classnames';
 import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
+import Toolbar from '@material-ui/core/Toolbar';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -13,9 +11,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -24,10 +20,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faDatabase, faEnvelope, faAt } from '@fortawesome/free-solid-svg-icons';
 import { faJs, faReact, faPython, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
-
 library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faEnvelope, faAt);
 library.add(fab, faJs, faReact, faPython, faDatabase, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub);
-
 
 class App extends Component {
   render() {
@@ -69,18 +63,6 @@ class App extends Component {
         date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
       },
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル7',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル8',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
     ]
 
     return (
@@ -92,6 +74,7 @@ class App extends Component {
           </Typography>
         </Toolbar>
         </AppBar>
+
         <main>
           <div className="sub-content bio">
             <div className="content-title">
@@ -121,8 +104,8 @@ class App extends Component {
                     ファッション、将棋、野球が好きです。
                   </p>
                 </div>
-          </Grid>
-          </Grid>
+              </Grid>
+            </Grid>
           </div>
           <div className="sub-content skill">
             <div className="content-title">
@@ -131,7 +114,7 @@ class App extends Component {
             </div>
             <Divider inset />
               <p style={{fontWeight: 600}}>よく使う/勉強中の技術・サービス</p>
-              <Grid container>
+              <Grid container style={{marginBottom: 40}}>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'js']} className="icons fa-4x" style={{color: '#FFD700'}} />
                   <span className="skill-name">JavaScript</span>
@@ -175,10 +158,7 @@ class App extends Component {
                     </span>
                 </Grid>
               </Grid>
-
-              <div style={{height: 20}}></div>
-
-              <Grid container>
+              <Grid container style={{marginBottom: 40}}>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'docker']} className="icons fa-4x" style={{color: '#1E90FF'}} />
                   <span className="skill-name">Docker</span>
@@ -234,35 +214,35 @@ class App extends Component {
             <div className="cardGrid">
               <Grid container spacing={40}>
                 {
-                  cards.map((cards, index) => {
-                    return (
-                      <Grid item key="index" sm={6} md={4} lg={3}>
-                        <Card className="card">
+                  cards.map(
+                    (cards, index) => {
+                      return (
+                        <Grid item lg={4} md={6} xs={12} key={index}>
+                          <Card className="card">
+                            <CardActionArea>
+                              <CardMedia
+                                className="media"
+                                image={cards.image}
+                                style={{height: 180}}
+                              />
 
-                          <CardActionArea>
-                            <CardMedia
-                              className="media"
-                              image={cards.image}
-                              title="Contemplative Reptile"
-                              style={{height: 180}}
-                            />
-                            <CardContent>
-                              <Typography style={{fontSize: 16}}>
-                                {cards.title}
-                              </Typography>
-                              <Typography variant="body2" component="span">
-                                {cards.date}
-                              </Typography>
-                              <hr />
-                              <Typography variant="body1" component="span">
-                                {cards.body}
-                              </Typography>
-                            </CardContent>
-                          </CardActionArea>
-
-                        </Card>
-                      </Grid>
-                    )})
+                              <CardContent>
+                                <Typography style={{fontSize: 16}}>
+                                  {cards.title}
+                                </Typography>
+                                <Typography variant="body2" component="span">
+                                  {cards.date}
+                                </Typography>
+                                <hr />
+                                <Typography variant="body1" component="span">
+                                  {cards.body}
+                                </Typography>
+                              </CardContent>
+                            </CardActionArea>
+                          </Card>
+                        </Grid>
+                      );
+                    })
                 }
               </Grid>
             </div>

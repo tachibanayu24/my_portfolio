@@ -76,6 +76,14 @@ main {
   margin: 40px 0;
 }
 
+.overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: black;
+  background-color: white;
+}
+
 footer {
   font-size: 12px;
   color: grey;
