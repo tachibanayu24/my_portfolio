@@ -45,6 +45,18 @@ main {
 
 .skills {
   text-align: center;
+  padding: 5px;
+}
+
+.skill-name {
+  display: block;
+  font-family: Monaco, 'Courier New';
+  font-size: 14px
+}
+
+.skill-details {
+  display: block;
+  font-size: 12px
 }
 
 footer {
