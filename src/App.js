@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -30,6 +31,50 @@ library.add(fab, faJs, faReact, faPython, faDatabase, faAws, faSlackHash, faLinu
 
 class App extends Component {
   render() {
+
+    const cards = [
+      {
+        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
+        title:'タイトル1',
+        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+      },
+      {
+        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
+        title:'タイトル2',
+        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+      },
+      {
+        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
+        title:'タイトル3',
+        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+      },
+      {
+        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
+        title:'タイトル4',
+        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+      },
+      {
+        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
+        title:'タイトル5',
+        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+      },
+      {
+        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
+        title:'タイトル6',
+        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+      },
+      {
+        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
+        title:'タイトル7',
+        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+      },
+      {
+        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
+        title:'タイトル8',
+        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
+      },
+    ]
+
     return (
       <React.Fragment>
         <AppBar position="static" color="default">
@@ -77,7 +122,7 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./font/rails.png')} style={{height: 63}} />
+                  <img src={require('./img/rails.png')} style={{height: 63}} />
                   <span className="skill-name">Ruby on Rails</span>
                     <span className="skill-details">
                       簡単なWebアプリをいくつか開発しました。
@@ -91,7 +136,7 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./font/webrtc.png')} style={{height: 63}} />
+                  <img src={require('./img/webrtc.png')} style={{height: 63}} />
                   <span className="skill-name">WebRTC</span>
                     <span className="skill-details">
                       peer.jsで社内LANにおけるビデオチャットアプリを開発しました。
@@ -132,7 +177,7 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./font/alexa.png')} style={{height: 63}} />
+                  <img src={require('./img/alexa.png')} style={{height: 63}} />
                   <span className="skill-name">Alexa Skill</span>
                     <span className="skill-details">
                       個人でスキル開発をしたり、社内勉強会で講師をしたりしました。
@@ -146,23 +191,60 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./font/gas.png')} style={{height: 63}} />
+                  <img src={require('./img/gas.png')} style={{height: 63}} />
                   <span className="skill-name">Google Apps Script</span>
                     <span className="skill-details">
                       ベンチャー時代、社内で利用していたGoogle SpreadsheetにGASを適用して業務改善など行っていました。
                     </span>
                 </Grid>
               </Grid>
-
-
           </div>
+
           <div className="sub-content work">
             <div className="content-title">
               <FontAwesomeIcon className="icons fa-lg" icon="pen-fancy" style={{color: '#FF6347'}} />
               <span>works/activities</span>
               <Divider inset />
             </div>
+            <div className="cardGrid">
+              <Grid container spacing={40}>
+                {
+                  cards.map((cards, index) => {
+                    return (
+                      <Grid item key="index" sm={6} md={4} lg={3}>
+                        <Card className="card">
+                          <CardActionArea>
+                            <CardMedia
+                              className="media"
+                              image={cards.image}
+                              title="Contemplative Reptile"
+                              style={{height: 180}}
+                            />
+                            <CardContent>
+                              <Typography gutterBottom variant="headline" component="h2">
+                                {cards.title}
+                              </Typography>
+                              <Typography component="p">
+                                {cards.body}
+                              </Typography>
+                            </CardContent>
+                          </CardActionArea>
+                          <CardActions>
+                            <Button size="small" color="primary">
+                              Share
+                            </Button>
+                            <Button size="small" color="primary">
+                              Learn More
+                            </Button>
+                          </CardActions>
+                        </Card>
+                      </Grid>
+                    )})
+                }
+              </Grid>
+            </div>
           </div>
+
           <div className="sub-content photo">
             <div className="content-title">
               <FontAwesomeIcon className="icons fa-lg" icon="camera-retro" style={{color: '#DDA0DD'}} />
@@ -186,7 +268,5 @@ class App extends Component {
     );
   }
 }
-
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 export default App;

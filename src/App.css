@@ -31,7 +31,6 @@ main {
 .sub-content {
   padding: 5px;
   margin: 5px;
-  /* height: 100px; */
 }
 
 .content-title {
@@ -57,6 +56,10 @@ main {
 .skill-details {
   display: block;
   font-size: 12px
+}
+
+.cardGrid {
+  margin: 40px 0;
 }
 
 footer {
