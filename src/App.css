@@ -1,4 +1,10 @@
 * {
+  font-waight: 300;
+}
+
+@font-face {
+  font-family: mplus-1p-regular;
+  src:url(./font/mplus-1p-regular.ttf)  format("truetype");
 }
 
 .appBar {
@@ -15,7 +21,6 @@ div {
 }
 
 main {
-  font-family: 'Noto Sans Japanese', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   margin: 40px 20px;
 }
 
@@ -26,13 +31,12 @@ main {
 }
 
 .content-title {
-  font-family: 'Courier New';
+  font-family: Monaco, 'Courier New';
   font-size: 24px;
-  padding-left: 20px;
 }
 
 .sub-content-body {
-  padding-left: 50px;
+  padding-left: 15px;
 }
 
 footer {

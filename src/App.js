@@ -17,6 +17,10 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+
 import FaceIcon from '@material-ui/icons/FaceTwoTone';
 import CodeIcon from '@material-ui/icons/CodeTwoTone';
 import BrushIcon from '@material-ui/icons/BrushTwoTone';
@@ -24,19 +28,21 @@ import CameraIcon from '@material-ui/icons/PhotoCameraTwoTone';
 import WhatshotIcon from '@material-ui/icons/WhatshotTwoTone';
 
 
+
 class App extends Component {
   render() {
+    library.add(faStroopwafel)
+
     return (
       <React.Fragment>
         <AppBar position="static" color="default">
         <Toolbar>
-          <Typography variant="title" color="inherit" style={{ fontFamily: "Courier New", fontWeight: 900}} noWrap>
-            <span style={{color: '#1E90FF' }}>/Yuto_Tachibana</span> <span style={{ color: '#FF6347' }}>❯</span><span style={{ color: '#A9A9A9'}}>❯❯ Portfolio_</span>
+          <Typography variant="title" color="inherit" style={{ fontSize: 18, fontFamily: "Courier New", fontWeight: 900}} noWrap>
+            <span style={{color: '#1E90FF' }}>/YutoTachibana</span> <span style={{ color: '#FF6347' }}>❯</span><span style={{ color: '#A9A9A9'}}>❯❯ Portfolio_</span>
           </Typography>
         </Toolbar>
         </AppBar>
-
-        <main>
+        <main><FontAwesomeIcon icon="stroopwafel" />
           <div className="sub-content bio">
             <div className="content-title">
               <FaceIcon style={{height: 35, width: 35, marginRight: 10,}} />
@@ -57,6 +63,7 @@ class App extends Component {
               <span>skills</span>
             </div>
             <Divider inset />
+
           </div>
           <div className="sub-content work">
             <div className="content-title">
