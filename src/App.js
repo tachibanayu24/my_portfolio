@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './App.css';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
@@ -85,12 +82,12 @@ class App extends Component {
             <Grid container>
               <Grid item lg={2} md={2} xs={12}>
                 <div className="sub-content-image">
-                  <img src={require('./img/profile.png')} />
+                  <img src={require('./img/profile.png')} alt="profile" />
                 </div>
               </Grid>
               <Grid item lg={10} md={10} xs={12}>
                 <div className="sub-content-body">
-                  <p>はじめまして。立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank">@tachibanayu24</a>)と申します。<br />
+                  <p>はじめまして。立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">@tachibanayu24</a>)と申します。<br />
                     都内在住のテック好きな男子です。</p>
                   <p>家庭の事情で高校を1年で中退して肉体労働者になりましたが、お金をためて高卒認定を取得し、都内の大学(工学部)へ進学。<br />
                     大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。<br />
@@ -130,7 +127,7 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./img/rails.png')} style={{height: 63}} />
+                  <img src={require('./img/rails.png')} style={{height: 63}} alt="rails" />
                   <span className="skill-name">Ruby on Rails</span>
                     <span className="skill-details">
                       RailsとMySQLでWebアプリをいくつか開発しました。
@@ -144,7 +141,7 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./img/webrtc.png')} style={{height: 63}} />
+                  <img src={require('./img/webrtc.png')} style={{height: 63}} alt="webrtc" />
                   <span className="skill-name">WebRTC</span>
                     <span className="skill-details">
                       peer.jsで社内LANにおけるビデオチャットアプリを開発しました。
@@ -164,7 +161,7 @@ class App extends Component {
                   <span className="skill-name">Docker</span>
                     <span className="skill-details">
                       学生時代の研究テーマです。
-                      <a href="https://www.computer.org/csdl/proceedings/candar/2017/2087/00/2087a580-abs.html" target="_blank">学会発表</a>もいくつかしています。
+                      <a href="https://www.computer.org/csdl/proceedings/candar/2017/2087/00/2087a580-abs.html" target="_blank" rel="noopener noreferrer">学会発表</a>もいくつかしています。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
@@ -182,7 +179,7 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./img/alexa.png')} style={{height: 63}} />
+                  <img src={require('./img/alexa.png')} style={{height: 63}} alt="alexa"/>
                   <span className="skill-name">Alexa Skill</span>
                     <span className="skill-details">
                       個人でスキル開発をしたり、社内勉強会で講師をしたりしました。
@@ -196,7 +193,7 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./img/gas.png')} style={{height: 63}} />
+                  <img src={require('./img/gas.png')} style={{height: 63}} alt="gas"/>
                   <span className="skill-name">Google Apps Script</span>
                     <span className="skill-details">
                       ベンチャーにいた頃、SpreadsheetにGASを適用して業務改善を行いました。
@@ -258,23 +255,23 @@ class App extends Component {
               <Grid container>
                 <Grid item lg={4} md={4} xs={2}></Grid>
                 <Grid item lg={1} md={1} xs={2}>
-                  <a href="https://twitter.com/tachibanayu24" target="_blank">
+                  <a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="icons fa-2x" icon={['fab', 'twitter']} style={{color: '#1E90FF'}} />
                   </a>
                 </Grid>
                 <Grid item lg={1} md={1} xs={2}>
-                  <a href="https://www.instagram.com/tachibanayu24/" target="_blank">
+                  <a href="https://www.instagram.com/tachibanayu24/" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="icons fa-2x" icon={['fab', 'instagram']} style={{color: '#8B4513'}} />
                   </a>
                 </Grid>
                 <Grid item lg={1} md={1} xs={2}>
-                  <a href="https://github.com/tachibanayu24" target="_blank">
+                  <a href="https://github.com/tachibanayu24" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="icons fa-2x" icon={['fab', 'github']} style={{color: '#2F4F4F'}} />
                   </a>
                 </Grid>
                 <Grid item lg={1} md={1} xs={2}>
-                  <a href="https://qiita.com/tachibanayu24" target="_blank">
-                    <img src={require('./img/qiita.png')} style={{height: 34}} className="radius25" />
+                  <a href="https://qiita.com/tachibanayu24" target="_blank" rel="noopener noreferrer">
+                    <img src={require('./img/qiita.png')} style={{height: 34}} className="radius25" alt="qiita" />
                   </a>
                 </Grid>
                 <Grid item lg={4} md={4} xs={2}></Grid>
