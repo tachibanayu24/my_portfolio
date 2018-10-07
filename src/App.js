@@ -91,13 +91,24 @@ class App extends Component {
               <span>bio</span>
             </div>
             <Divider inset />
-            <div className="sub-content-body">
-              <p>都内在住のテック好きな男子です。</p>
-              <p>家庭の事情で高校を1年で中退して肉体労働者になりましたが、お金をためて高卒認定を取得し、都内の大学(工学部)へ進学。<br />
-                大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。</p>
-              <p>2018年4月に港区の大手通信系SIerに新卒入社し、そこではビジネス開発のお仕事をしています。<br />
-                業務ではあまりコードを書く機会を作れないので、プライベートでよくコーディングしています。</p>
-            </div>
+            <Grid container>
+              <Grid item lg={2} md={2} xs={12}>
+                <div className="sub-content-image">
+                  <img src={require('./img/profile.png')} />
+                </div>
+              </Grid>
+              <Grid item lg={10} md={10} xs={12}>
+                <div className="sub-content-body">
+                  <p>都内在住のテック好きな男子です。</p>
+                  <p>家庭の事情で高校を1年で中退して肉体労働者になりましたが、お金をためて高卒認定を取得し、都内の大学(工学部)へ進学。<br />
+                    大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。</p>
+                  <p>2018年4月に港区の大手通信系SIerに新卒入社し、そこではビジネス開発のお仕事をしています。<br />
+                    業務ではあまりコードを書く機会を作れないので、プライベートでよくコーディングしています。<br />
+                    一人称でサービス開発に携われるような技術を身につけることを目指して日々勉強中です。
+                  </p>
+                </div>
+          </Grid>
+          </Grid>
           </div>
           <div className="sub-content skill">
             <div className="content-title">
@@ -231,10 +242,7 @@ class App extends Component {
                           </CardActionArea>
                           <CardActions>
                             <Button size="small" color="primary">
-                              Share
-                            </Button>
-                            <Button size="small" color="primary">
-                              Learn More
+                              More
                             </Button>
                           </CardActions>
                         </Card>
@@ -245,13 +253,6 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="sub-content photo">
-            <div className="content-title">
-              <FontAwesomeIcon className="icons fa-lg" icon="camera-retro" style={{color: '#DDA0DD'}} />
-              <span>photos</span>
-              <Divider inset />
-            </div>
-          </div>
           <div className="sub-content sns">
             <div className="content-title">
               <FontAwesomeIcon className="icons fa-lg" icon="handshake" style={{color: '#4682B4'}} />
