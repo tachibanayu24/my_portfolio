@@ -24,171 +24,31 @@ library.add(fab, faJs, faReact, faPython, faDatabase, faAws, faSlackHash, faLinu
 
 class App extends Component {
   render() {
-    const cards = [
-      {
-        image: "/static/images//works/portfolio.png",
-        title:'Reactでポートフォリオ作成',
-        date: '2018/10/8',
-        catLg: 'dev',
-        cat: ['React','Material-UI','farebase',],
-        body: 'このページです。はじめてのReactです。自身の成果を振り返ったり、モチベーションを保ったりするのに良さそうなので開発しました。フロントエンドの知識をつけたかったのでReactにしました。お気に入りポイントのappBarは、私のMacbookのターミナルのプロンプトを再現しています。',
-        ref: {
-          name: ['準備中', '', 'GitHub',],
-          url: ['#', '', 'https://github.com/tachibanayu24/my_portfolio',],
-        },
-      },
-      {
-        image: '/static/images//works/roulette.png',
-        title:'迷ったときにAlexaがルーレットしてくれるスキル',
-        date: '2018/10/2',
-        catLg: 'dev',
-        cat: ['Lambda','javaScript','VUI',],
-        body: 'はじめてのVUI/AlexaSkill開発。「Alexa。みんなのルーレットで都道府県やって。」などと命令するとランダムで都道府県を返してくれます。国名や料理名にも対応しています。ダーツの旅的なことをたまにやるので開発してみました。',
-        ref: {
-          name: ['準備中', '紹介ツイート', '',],
-          url: ['#', 'https://twitter.com/tachibanayu24/status/1046381193506091008', '',],
-        },
-      },
-      {
-        image: '/static/images//works/pytinps.png',
-        title:'暗黙知をMarkdown記法で共有するDjangoアプリ',
-        catLg: 'dev',
-        cat: ['Django','MySQL','EC2',],
-        date: '2018/9/17',
-        body: 'ハッカソン#2 in 新宿。初めてDjangoを使いました。内に秘められがちな暗黙知をMarkdown記法によって共有できるサービスです。要するにQiitaのエロ版です。'
-                + '開発メンバーの強い希望でアダルトなサービスになりました。現在開発途中でまだ完成していません。',
-        ref: {
-          name: ['準備中', '紹介ツイート', 'GitHub',],
-          url: ['#', 'https://twitter.com/tachibanayu24/status/1041700568492793856', 'https://github.com/tachibanayu24/py_slash_tinps',],
-        },
-      },
-      {
-        image: "/static/images//works/qiita-django.png",
-        title:'DjangoアプリをAWSにデプロイするクイックリファレンス',
-        date: '2018/9/11',
-        catLg: 'written',
-        cat: ['Django','Nginx','EC2',],
-        body: 'ハッカソン#2の前に、#1でハマりまくったAWSへのデプロイ手順を勉強する意味も込めてQiitaに記事を書いてみました。自分の記事の中では読まれることを意識して書きました。',
-        ref: {
-          name: ['紹介ツイート', 'Qiita', '',],
-          url: ['https://twitter.com/tachibanayu24/status/1039888739617595397', 'https://qiita.com/tachibanayu24/items/b8d73cdfd4cbd42c5b1d', '',],
-        },
-      },
-      {
-        image: '/static/images//works/incrude.png',
-        title:'仕事が辛い人を応援するWebアプリ',
-        catLg: 'dev',
-        cat: ['Rails','MySQL','EC2',],
-        date: '2018/8/23',
-        body: 'ハッカソン#1 in 大阪。初めて独自ドメインで公開したWebアプリです(現在は停止中)。TwitterAPIでユーザ登録し、一日一回就業後にスタンプを押します。'
-              + 'スタンプの個数に応じでアプリ内の労働環境が変化し、最終的に会社が爆発します。決して会社が嫌いなわけではなく、「もっとエッジ効かせたい」を繰り返していたらこうなってしまいました。',
-        ref: {
-          name: ['停止中', '紹介ツイート', 'GitHub'],
-          url: ['', 'https://twitter.com/tachibanayu24/status/1032619847216070656', 'https://github.com/tachibanayu24/incrude'],
-        },
-      },
-      {
-        image: "/static/images//works/100daysofcode.png",
-        title:'#100DaysOfCode 開始！',
-        date: '2018/8/1',
-        catLg: 'other',
-        cat: ['','','',],
-        body: '主にTwitterで流行っている?100日間コーディングをしてTwitterで報告するという、マラソンのような活動を始めます。忙しくても基本的には毎日やります。最初80日はインプットしつつ月1ペースでなにか作り、最後20日くらいで自分のWebサービスを作りたいと思います。',
-        ref: {
-          name: ['ツイート一覧', '', '',],
-          url: ['https://twitter.com/search?f=tweets&q=from%3Atachibanayu24%20%23100DaysOfCode', '', '',],
-        },
-      },
-    ]
-    const chips = (cat) => {
-      if(cat === 'dev') {
-        return(
-          <Chip style={{backgroundColor: '#3CB371', color: '#fff', margin: 3 }} label="開発" className="chip" />
-        );
-      } else if(cat === 'written') {
-        return(
-          <Chip style={{backgroundColor: '#1E90FF', color: '#fff', margin: 3 }} label="書きもの" className="chip" />
-        );
-      } else if(cat === 'other') {
-        return(
-          <Chip style={{backgroundColor: 'grey', color: '#fff', margin: 3 }} label="その他" className="chip" />
-        );
-      } else if(cat === undefined || cat === '') {
-      } else {
-        return(
-          <Chip style={{backgroundColor: '#FF8C00', color: '#fff', margin: 3 }} label={cat} className="chip" />
-        );
-      }
-    }
-    const refs = (name, url) => {
-      if(name === undefined || name === '' ) {
-      } else if(name === '準備中' || name === '停止中') {
-        return (
-          <Button size="small" style={{textTransform: 'none', backgroundColor: 'grey', color: '#FFF'}}>
-            {name}
-          </Button>
-        );
-      }else {
-        return(
-          <Button size="small" style={{backgroundColor: '#00CED1' }}>
-            <a href={url} style={{ color: "white", textDecoration: "none" }} target="_blank" rel="noopener noreferrer">{name}</a>
-          </Button>
-        );
-      }
-    }
-
-    console.log(cards[0].cat)
-    console.log(cards[0].cat[1])
-
     return (
       <React.Fragment>
         <AppBar position="sticky" style={{backgroundColor: '#022B36E0'}}>
-        <Toolbar>
-          <Typography variant="title" color="inherit" style={{ fontSize: 18, fontFamily: 'Monaco', fontWeight: 900}} noWrap>
-            <span style={{color: '#1E90FF' }}>~/YutoTachibana</span> <span style={{ color: '#FF6347' }}>❯</span><span style={{ color: '#A9A9A9'}}>❯❯ Portfolio<span className="blink">_</span></span>
-          </Typography>
-        </Toolbar>
+          <Toolbar>
+            <Typography variant="title" color="inherit" style={{ fontSize: 18, fontFamily: 'Monaco', fontWeight: 900}} noWrap>
+              <span style={{color: '#1E90FF' }}>~/YutoTachibana</span> <span style={{ color: '#FF6347' }}>❯</span><span style={{ color: '#A9A9A9'}}>❯❯ Portfolio<span className="blink">_</span></span>
+            </Typography>
+          </Toolbar>
         </AppBar>
 
         <main>
           <div className="sub-content bio">
-            <div className="content-title">
-              <FontAwesomeIcon className="icons fa-lg" icon="flushed" style={{color: '#C71585'}} />
-              <span>bio</span>
-            </div>
-            <Divider inset />
+            { contentTitle('bio', 'flushed', '#C71585')}
             <Grid container>
               <Grid item lg={2} md={2} xs={12} style={{margin: 'auto'}}>
-                <div className="sub-content-image">
-                  <img src={require('./img/profile.png')} alt="profile" />
-                </div>
+                <div className="sub-content-image"> <img src={require('./img/profile.png')} alt="profile" /> </div>
               </Grid>
               <Grid item lg={10} md={10} xs={12}>
-                <div className="sub-content-body">
-                  <p>はじめまして。立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">@tachibanayu24</a>)と申します。<br />
-                    都内在住のテック好きな男子です。</p>
-                  <p>家庭の事情で高校を1年で中退して肉体労働者になりましたが、お金をためて高卒認定を取得し、都内の大学(工学部)へ進学。<br />
-                    大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。<br />
-                    2018年4月に港区の大手通信系SIerに新卒入社し、そこではビジネス開発の仕事をしています。
-                  </p>
-                  <p>
-                    業務ではなかなかコードを書く機会を作れないので、プライベートでよくコーディングしています。<br />
-                    一人称でサービス開発に携われるような技術を身につけることを目指して日々勉強中です。
-                  </p>
-                  <p>
-                    ファッション、将棋、野球が好きです。
-                  </p>
-                </div>
+                <div className="sub-content-body"> <Introduce /> </div>
               </Grid>
             </Grid>
           </div>
+
           <div className="sub-content skill">
-            <div className="content-title">
-              <FontAwesomeIcon className="icons fa-lg" icon="code" style={{color: '#ADFF2F'}} />
-              <span>tech skills</span>
-            </div>
-            <Divider inset />
-              <p style={{fontWeight: 600}}>よく使う/勉強中の技術・サービス</p>
+            { contentTitle('Tech skills', 'code', '#ADFF2F')}
               <Grid container style={{marginBottom: 40}}>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'js']} className="icons fa-4x" style={{color: '#FFD700'}} />
@@ -281,67 +141,53 @@ class App extends Component {
           </div>
 
           <div className="sub-content work">
-            <div className="content-title">
-              <FontAwesomeIcon className="icons fa-lg" icon="pen-fancy" style={{color: '#FF6347'}} />
-              <span>works/activities</span>
-              <Divider inset />
-            </div>
-            <div className="cardGrid">
-              <Grid container>
-                {
-                  cards.map(
-                    (cards, index) => {
-                      return (
-                        <Grid item lg={4} md={4} xs={12} key={index} style={{paddingBottom: 20}}>
-                          <Card className="card" style={{width: 340}}>
-                              <CardMedia
-                                className="media"
-                                image={cards.image}
-                                style={{height: 200, width: 340}}
-                              />
+            { contentTitle('works/activities', 'pen-fancy', '#FF6347')}
+            <Grid container className="cardGrid">
+              {
+                cards.map(
+                  (cards, index) => {
+                    return (
+                      <Grid item lg={4} md={4} xs={12} key={index} style={{paddingBottom: 20}}>
+                        <Card className="card" style={{width: 340}}>
+                            <CardMedia
+                              className="media"
+                              image={cards.image}
+                              style={{height: 200, width: 340}}
+                            />
 
-                              <CardContent>
-                                <Typography style={{fontSize: 16, fontWeight: 600, marginBottom: 5}}>
-                                  {cards.title}
-                                </Typography>
-                                <Typography variant="body2" component="span">
-                                  <Grid container>
-                                    <Grid item xs={3} style={{margin: 'auto'}}>
-                                      <div>{cards.date}</div>
-                                    </Grid>
-                                    <Grid item xs={9}>
-                                      {chips(cards.catLg)}
-                                      {chips(cards.cat[0])}
-                                      {chips(cards.cat[1])}
-                                      {chips(cards.cat[2])}
-                                    </Grid>
+                            <CardContent>
+                              <Typography style={{fontSize: 16, fontWeight: 600, marginBottom: 5}}> {cards.title} </Typography>
+                              <Typography variant="body2" component="span">
+                                <Grid container>
+                                  <Grid item xs={3} style={{margin: 'auto'}}>
+                                    <div>{cards.date}</div>
                                   </Grid>
-                                </Typography>
-                                <hr />
-                                <Typography variant="body1" component="span">
-                                  {cards.body}
-                                </Typography>
-                              </CardContent>
-                              <CardActions style={{textDecoration: 'none'}}>
-                                {refs(cards.ref.name[0], cards.ref.url[0])}
-                                {refs(cards.ref.name[1], cards.ref.url[1])}
-                                {refs(cards.ref.name[2], cards.ref.url[2])}
-                              </CardActions>
-                          </Card>
-                        </Grid>
-                      );
-                    })
-                }
-              </Grid>
-            </div>
+                                  <Grid item xs={9}>
+                                    {chips(cards.catLg)}
+                                    {chips(cards.cat[0])}
+                                    {chips(cards.cat[1])}
+                                    {chips(cards.cat[2])}
+                                  </Grid>
+                                </Grid>
+                              </Typography>
+                              <hr />
+                              <Typography variant="body1" component="span"> {cards.body} </Typography>
+                            </CardContent>
+                            <CardActions style={{textDecoration: 'none'}}>
+                              {refs(cards.ref.name[0], cards.ref.url[0])}
+                              {refs(cards.ref.name[1], cards.ref.url[1])}
+                              {refs(cards.ref.name[2], cards.ref.url[2])}
+                            </CardActions>
+                        </Card>
+                      </Grid>
+                    );
+                  })
+              }
+            </Grid>
           </div>
 
-          <div className="sub-content sns">
-            <div className="content-title">
-              <FontAwesomeIcon className="icons fa-lg" icon="handshake" style={{color: '#4682B4'}} />
-              <span>SNS/contact</span>
-              <Divider inset />
-            </div>
+          <div className="sub-content">
+            { contentTitle('SNS/Contact', 'handshake', '#4682B4')}
             <div style={{textAlign: 'center', marginTop: 20}}>
               <Grid container>
                 <Grid item lg={12} md={12} xs={12}><span style={{color: '#2F4F4F', fontSize: 14}}>Twitterやメールでご連絡いただけると嬉しいです</span></Grid>
@@ -389,6 +235,155 @@ class App extends Component {
           <p>copyright 2018- Yuto Tachibana</p>
         </footer>
     </React.Fragment>
+    );
+  }
+}
+
+const contentTitle = (title, icon, iconColor) => {
+  return(
+    <React.Fragment>
+      <div className="content-title">
+        <FontAwesomeIcon className="icons fa-lg" icon={icon} color={iconColor} />
+        <span>{title}</span>
+        <Divider inset />
+      </div>
+    </React.Fragment>
+  );
+}
+
+class Introduce extends Component {
+  render() {
+    return(
+      <React.Fragment>
+        <p>はじめまして。立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">@tachibanayu24</a>)と申します。<br />
+          都内在住のテック好きな男子です。</p>
+        <p>家庭の事情で高校を1年で中退して肉体労働者になりましたが、お金をためて高卒認定を取得し、都内の大学(工学部)へ進学。<br />
+          大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。<br />
+          2018年4月に港区の大手通信系SIerに新卒入社し、そこではビジネス開発の仕事をしています。
+        </p>
+        <p>
+          業務ではなかなかコードを書く機会を作れないので、プライベートでよくコーディングしています。<br />
+          一人称でサービス開発に携われるような技術を身につけることを目指して日々勉強中です。
+        </p>
+        <p>
+          好きなものはファッション、将棋、野球、海外ドラマです。
+        </p>
+      </React.Fragment>
+    );
+  }
+}
+
+const cards = [
+  {
+    image: "/static/images//works/portfolio.png",
+    title:'Reactでポートフォリオ作成',
+    date: '2018/10/8',
+    catLg: 'dev',
+    cat: ['React','Material-UI','farebase',],
+    body: 'このページです。はじめてのReactです。自身の成果を振り返ったり、モチベーションを保ったりするのに良さそうなので開発しました。フロントエンドの知識をつけたかったのでReactにしました。お気に入りポイントのappBarは、私のMacbookのターミナルのプロンプトを再現しています。',
+    ref: {
+      name: ['準備中', '', 'GitHub',],
+      url: ['#', '', 'https://github.com/tachibanayu24/my_portfolio',],
+    },
+  },
+  {
+    image: '/static/images//works/roulette.png',
+    title:'迷ったときにAlexaがルーレットしてくれるスキル',
+    date: '2018/10/2',
+    catLg: 'dev',
+    cat: ['Lambda','javaScript','VUI',],
+    body: 'はじめてのVUI/AlexaSkill開発。「Alexa。みんなのルーレットで都道府県やって。」などと命令するとランダムで都道府県を返してくれます。国名や料理名にも対応しています。ダーツの旅的なことをたまにやるので開発してみました。',
+    ref: {
+      name: ['準備中', '紹介ツイート', '',],
+      url: ['#', 'https://twitter.com/tachibanayu24/status/1046381193506091008', '',],
+    },
+  },
+  {
+    image: '/static/images//works/pytinps.png',
+    title:'暗黙知をMarkdown記法で共有するDjangoアプリ',
+    catLg: 'dev',
+    cat: ['Django','MySQL','EC2',],
+    date: '2018/9/17',
+    body: 'ハッカソン#2 in 新宿。初めてDjangoを使いました。内に秘められがちな暗黙知をMarkdown記法によって共有できるサービスです。要するにQiitaのエロ版です。'
+            + '開発メンバーの強い希望でアダルトなサービスになりました。現在開発途中でまだ完成していません。',
+    ref: {
+      name: ['準備中', '紹介ツイート', 'GitHub',],
+      url: ['#', 'https://twitter.com/tachibanayu24/status/1041700568492793856', 'https://github.com/tachibanayu24/py_slash_tinps',],
+    },
+  },
+  {
+    image: "/static/images//works/qiita-django.png",
+    title:'DjangoアプリをAWSにデプロイするクイックリファレンス',
+    date: '2018/9/11',
+    catLg: 'written',
+    cat: ['Django','Nginx','EC2',],
+    body: 'ハッカソン#2の前に、#1でハマりまくったAWSへのデプロイ手順を勉強する意味も込めてQiitaに記事を書いてみました。自分の記事の中では読まれることを意識して書きました。',
+    ref: {
+      name: ['紹介ツイート', 'Qiita', '',],
+      url: ['https://twitter.com/tachibanayu24/status/1039888739617595397', 'https://qiita.com/tachibanayu24/items/b8d73cdfd4cbd42c5b1d', '',],
+    },
+  },
+  {
+    image: '/static/images//works/incrude.png',
+    title:'仕事が辛い人を応援するWebアプリ',
+    catLg: 'dev',
+    cat: ['Rails','MySQL','EC2',],
+    date: '2018/8/23',
+    body: 'ハッカソン#1 in 大阪。初めて独自ドメインで公開したWebアプリです(現在は停止中)。TwitterAPIでユーザ登録し、一日一回就業後にスタンプを押します。'
+          + 'スタンプの個数に応じでアプリ内の労働環境が変化し、最終的に会社が爆発します。決して会社が嫌いなわけではなく、「もっとエッジ効かせたい」を繰り返していたらこうなってしまいました。',
+    ref: {
+      name: ['停止中', '紹介ツイート', 'GitHub'],
+      url: ['', 'https://twitter.com/tachibanayu24/status/1032619847216070656', 'https://github.com/tachibanayu24/incrude'],
+    },
+  },
+  {
+    image: "/static/images//works/100daysofcode.png",
+    title:'#100DaysOfCode 開始！',
+    date: '2018/8/1',
+    catLg: 'other',
+    cat: ['','','',],
+    body: '主にTwitterで流行っている?100日間コーディングをしてTwitterで報告するという、マラソンのような活動を始めます。忙しくても基本的には毎日やります。最初80日はインプットしつつ月1ペースでなにか作り、最後20日くらいで自分のWebサービスを作りたいと思います。',
+    ref: {
+      name: ['ツイート一覧', '', '',],
+      url: ['https://twitter.com/search?f=tweets&q=from%3Atachibanayu24%20%23100DaysOfCode', '', '',],
+    },
+  },
+]
+
+const chips = (cat) => {
+  if(cat === 'dev') {
+    return(
+      <Chip style={{backgroundColor: '#3CB371', color: '#fff', margin: 3 }} label="開発" className="chip" />
+    );
+  } else if(cat === 'written') {
+    return(
+      <Chip style={{backgroundColor: '#1E90FF', color: '#fff', margin: 3 }} label="書きもの" className="chip" />
+    );
+  } else if(cat === 'other') {
+    return(
+      <Chip style={{backgroundColor: 'grey', color: '#fff', margin: 3 }} label="その他" className="chip" />
+    );
+  } else if(cat === undefined || cat === '') {
+  } else {
+    return(
+      <Chip style={{backgroundColor: '#FF8C00', color: '#fff', margin: 3 }} label={cat} className="chip" />
+    );
+  }
+}
+
+const refs = (name, url) => {
+  if(name === undefined || name === '' ) {
+  } else if(name === '準備中' || name === '停止中') {
+    return (
+      <Button size="small" style={{textTransform: 'none', backgroundColor: 'grey', color: '#FFF'}}>
+        {name}
+      </Button>
+    );
+  } else {
+    return(
+      <Button size="small" style={{backgroundColor: '#00CED1' }}>
+        <a href={url} style={{ color: "white", textDecoration: "none" }} target="_blank" rel="noopener noreferrer">{name}</a>
+      </Button>
     );
   }
 }
