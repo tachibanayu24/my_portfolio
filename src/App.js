@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import './App.css';
 
-import classNames from 'classnames';
 import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
+import Toolbar from '@material-ui/core/Toolbar';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CardActions from '@material-ui/core/CardActions';
+import Button from '@material-ui/core/Button';
+import Chip from '@material-ui/core/Chip';
 import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -24,112 +19,37 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faDatabase, faEnvelope, faAt } from '@fortawesome/free-solid-svg-icons';
 import { faJs, faReact, faPython, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
-
 library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faEnvelope, faAt);
 library.add(fab, faJs, faReact, faPython, faDatabase, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub);
 
-
 class App extends Component {
   render() {
-
-    const cards = [
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル1',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル2',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル3',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル4',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル5',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル6',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル7',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
-      {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
-        title:'タイトル8',
-        date: '2018/10/7',
-        body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー'
-      },
-    ]
-
     return (
       <React.Fragment>
         <AppBar position="sticky" style={{backgroundColor: '#022B36E0'}}>
-        <Toolbar>
-          <Typography variant="title" color="inherit" style={{ fontSize: 18, fontFamily: 'Monaco', fontWeight: 900}} noWrap>
-            <span style={{color: '#1E90FF' }}>~/YutoTachibana</span> <span style={{ color: '#FF6347' }}>❯</span><span style={{ color: '#A9A9A9'}}>❯❯ Portfolio<span className="blink">_</span></span>
-          </Typography>
-        </Toolbar>
+          <Toolbar>
+            <Typography variant="title" color="inherit" style={{ fontSize: 18, fontFamily: 'Monaco', fontWeight: 900}} noWrap>
+              <span style={{color: '#1E90FF' }}>~/YutoTachibana</span> <span style={{ color: '#FF6347' }}>❯</span><span style={{ color: '#A9A9A9'}}>❯❯ Portfolio<span className="blink">_</span></span>
+            </Typography>
+          </Toolbar>
         </AppBar>
+
         <main>
           <div className="sub-content bio">
-            <div className="content-title">
-              <FontAwesomeIcon className="icons fa-lg" icon="flushed" style={{color: '#C71585'}} />
-              <span>bio</span>
-            </div>
-            <Divider inset />
+            { contentTitle('bio', 'flushed', '#C71585')}
             <Grid container>
-              <Grid item lg={2} md={2} xs={12}>
-                <div className="sub-content-image">
-                  <img src={require('./img/profile.png')} />
-                </div>
+              <Grid item lg={2} md={2} xs={12} style={{margin: 'auto'}}>
+                <div className="sub-content-image"> <img src={require('./img/profile.png')} alt="profile" /> </div>
               </Grid>
               <Grid item lg={10} md={10} xs={12}>
-                <div className="sub-content-body">
-                  <p>はじめまして。立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank">@tachibanayu24</a>)と申します。<br />
-                    都内在住のテック好きな男子です。</p>
-                  <p>家庭の事情で高校を1年で中退して肉体労働者になりましたが、お金をためて高卒認定を取得し、都内の大学(工学部)へ進学。<br />
-                    大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。</p>
-                  <p>2018年4月に港区の大手通信系SIerに新卒入社し、そこではビジネス開発のお仕事をしています。<br />
-                    業務ではあまりコードを書く機会を作れないので、プライベートでよくコーディングしています。<br />
-                    一人称でサービス開発に携われるような技術を身につけることを目指して日々勉強中です。
-                  </p>
-                  <p>
-                    ファッション、将棋、野球が好きです。
-                  </p>
-                </div>
-          </Grid>
-          </Grid>
+                <div className="sub-content-body"> <Introduce /> </div>
+              </Grid>
+            </Grid>
           </div>
+
           <div className="sub-content skill">
-            <div className="content-title">
-              <FontAwesomeIcon className="icons fa-lg" icon="code" style={{color: '#ADFF2F'}} />
-              <span>tech skills</span>
-            </div>
-            <Divider inset />
-              <p>よく使う/勉強中の技術・サービス</p>
-              <Grid container>
+            { contentTitle('Tech skills', 'code', '#ADFF2F')}
+              <Grid container style={{marginBottom: 40}}>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'js']} className="icons fa-4x" style={{color: '#FFD700'}} />
                   <span className="skill-name">JavaScript</span>
@@ -145,7 +65,7 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./img/rails.png')} style={{height: 63}} />
+                  <img src={require('./img/rails.png')} style={{height: 63}} alt="rails" />
                   <span className="skill-name">Ruby on Rails</span>
                     <span className="skill-details">
                       RailsとMySQLでWebアプリをいくつか開発しました。
@@ -159,37 +79,34 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./img/webrtc.png')} style={{height: 63}} />
+                  <img src={require('./img/webrtc.png')} style={{height: 63}} alt="webrtc" />
                   <span className="skill-name">WebRTC</span>
                     <span className="skill-details">
-                      peer.jsで社内LANにおけるビデオチャットアプリを開発しました。
+                      PeerJSで社内LANにおけるビデオチャットアプリを開発しました。SkyWayのチュートリアルもやりました。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'linux']} className="icons fa-4x" style={{color: '#2F4F4F'}} />
                   <span className="skill-name">Linux</span>
                     <span className="skill-details">
-                      学生のころからよく触っています。
+                      学生のころからよく触っています。CUIの基本的な操作はできます。
                     </span>
                 </Grid>
               </Grid>
-
-              <div style={{height: 20}}></div>
-
-              <Grid container>
+              <Grid container style={{marginBottom: 40}}>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'docker']} className="icons fa-4x" style={{color: '#1E90FF'}} />
                   <span className="skill-name">Docker</span>
                     <span className="skill-details">
-                      学生時代の研究テーマです。
-                      <a href="https://www.computer.org/csdl/proceedings/candar/2017/2087/00/2087a580-abs.html" target="_blank">学会発表</a>もいくつかしています。
+                      学生時代の研究テーマです。<a href="https://hub.docker.com/r/tachibanayu24/exp3/" target="_blank" rel="noopener noreferrer">DockerHub</a>で研究用のイメージを公開しています。
+                      <a href="https://www.computer.org/csdl/proceedings/candar/2017/2087/00/2087a580-abs.html" target="_blank" rel="noopener noreferrer">学会発表</a>も。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'aws']} className="icons fa-4x" style={{color: '#FF8C00'}} />
                   <span className="skill-name">AWS</span>
                     <span className="skill-details">
-                      EC2, ECS, Lambda, S3, RDS, Route53, Batchなど。
+                      EC2, ECS, Lambda, S3, RDS, Route53, Batchなど。環境構築やデプロイの経験が何度かあります。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
@@ -200,10 +117,10 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./img/alexa.png')} style={{height: 63}} />
+                  <img src={require('./img/alexa.png')} style={{height: 63}} alt="alexa"/>
                   <span className="skill-name">Alexa Skill</span>
                     <span className="skill-details">
-                      個人でスキル開発をしたり、社内勉強会で講師をしたりしました。
+                      個人でスキル開発をしたり、スマスピ最新動向というテーマで勉強会で発表したりしまいた。。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
@@ -214,7 +131,7 @@ class App extends Component {
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
-                  <img src={require('./img/gas.png')} style={{height: 63}} />
+                  <img src={require('./img/gas.png')} style={{height: 63}} alt="gas"/>
                   <span className="skill-name">Google Apps Script</span>
                     <span className="skill-details">
                       ベンチャーにいた頃、SpreadsheetにGASを適用して業務改善を行いました。
@@ -224,79 +141,83 @@ class App extends Component {
           </div>
 
           <div className="sub-content work">
-            <div className="content-title">
-              <FontAwesomeIcon className="icons fa-lg" icon="pen-fancy" style={{color: '#FF6347'}} />
-              <span>works/activities</span>
-              <Divider inset />
-            </div>
-            <div className="cardGrid">
-              <Grid container spacing={40}>
-                {
-                  cards.map((cards, index) => {
+            { contentTitle('works/activities', 'pen-fancy', '#FF6347')}
+            <Grid container className="cardGrid">
+              {
+                cards.map(
+                  (cards, index) => {
                     return (
-                      <Grid item key="index" sm={6} md={4} lg={3}>
-                        <Card className="card">
-                          <CardActionArea>
+                      <Grid item lg={4} md={4} xs={12} key={index} style={{paddingBottom: 20}}>
+                        <Card className="card" style={{width: 340}}>
                             <CardMedia
                               className="media"
                               image={cards.image}
-                              title="Contemplative Reptile"
-                              style={{height: 180}}
+                              style={{height: 200, width: 340}}
                             />
+
                             <CardContent>
-                              <Typography style={{fontSize: 16}}>
-                                {cards.title}
-                              </Typography>
+                              <Typography style={{fontSize: 16, fontWeight: 600, marginBottom: 5}}> {cards.title} </Typography>
                               <Typography variant="body2" component="span">
-                                {cards.date}
+                                <Grid container>
+                                  <Grid item xs={3} style={{margin: 'auto'}}>
+                                    <div>{cards.date}</div>
+                                  </Grid>
+                                  <Grid item xs={9}>
+                                    {chips(cards.catLg)}
+                                    {chips(cards.cat[0])}
+                                    {chips(cards.cat[1])}
+                                    {chips(cards.cat[2])}
+                                  </Grid>
+                                </Grid>
                               </Typography>
                               <hr />
-                              <Typography variant="body1" component="span">
-                                {cards.body}
-                              </Typography>
+                              <Typography variant="body1" component="span"> {cards.body} </Typography>
                             </CardContent>
-                          </CardActionArea>
+                            <CardActions style={{textDecoration: 'none'}}>
+                              {refs(cards.ref.name[0], cards.ref.url[0])}
+                              {refs(cards.ref.name[1], cards.ref.url[1])}
+                              {refs(cards.ref.name[2], cards.ref.url[2])}
+                            </CardActions>
                         </Card>
                       </Grid>
-                    )})
-                }
-              </Grid>
-            </div>
+                    );
+                  })
+              }
+            </Grid>
           </div>
 
-          <div className="sub-content sns">
-            <div className="content-title">
-              <FontAwesomeIcon className="icons fa-lg" icon="handshake" style={{color: '#4682B4'}} />
-              <span>SNS/Contact</span>
-              <Divider inset />
-            </div>
-            <div style={{textAlign: 'center', marginTop: 40}}>
+          <div className="sub-content">
+            { contentTitle('SNS/Contact', 'handshake', '#4682B4')}
+            <div style={{textAlign: 'center', marginTop: 20}}>
               <Grid container>
+                <Grid item lg={12} md={12} xs={12}><span style={{color: '#2F4F4F', fontSize: 14}}>Twitterやメールでご連絡いただけると嬉しいです</span></Grid>
+                </Grid>
+              <Grid container style={{marginTop: 20}}>
                 <Grid item lg={4} md={4} xs={2}></Grid>
                 <Grid item lg={1} md={1} xs={2}>
-                  <a href="https://twitter.com/tachibanayu24" target="_blank">
+                  <a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="icons fa-2x" icon={['fab', 'twitter']} style={{color: '#1E90FF'}} />
                   </a>
                 </Grid>
                 <Grid item lg={1} md={1} xs={2}>
-                  <a href="https://www.instagram.com/tachibanayu24/" target="_blank">
+                  <a href="https://www.instagram.com/tachibanayu24/" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="icons fa-2x" icon={['fab', 'instagram']} style={{color: '#8B4513'}} />
                   </a>
                 </Grid>
                 <Grid item lg={1} md={1} xs={2}>
-                  <a href="https://github.com/tachibanayu24" target="_blank">
+                  <a href="https://github.com/tachibanayu24" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="icons fa-2x" icon={['fab', 'github']} style={{color: '#2F4F4F'}} />
                   </a>
                 </Grid>
                 <Grid item lg={1} md={1} xs={2}>
-                  <a href="https://qiita.com/tachibanayu24" target="_blank">
-                    <img src={require('./img/qiita.png')} style={{height: 34}} className="radius25" />
+                  <a href="https://qiita.com/tachibanayu24" target="_blank" rel="noopener noreferrer">
+                    <img src={require('./img/qiita.png')} style={{height: 34}} className="radius25" alt="qiita" />
                   </a>
                 </Grid>
                 <Grid item lg={4} md={4} xs={2}></Grid>
               </Grid>
 
-              <Grid container>
+              <Grid container style={{marginTop: 30 }}>
                 <Grid item lg={4} md={4} xs={1}></Grid>
                 <Grid item lg={1} md={1} xs={2} style={{textAlign: 'right'}} >
                     <FontAwesomeIcon className="icons fa-2x" icon='envelope' style={{color: '#FF4500'}} />
@@ -314,6 +235,155 @@ class App extends Component {
           <p>copyright 2018- Yuto Tachibana</p>
         </footer>
     </React.Fragment>
+    );
+  }
+}
+
+const contentTitle = (title, icon, iconColor) => {
+  return(
+    <React.Fragment>
+      <div className="content-title">
+        <FontAwesomeIcon className="icons fa-lg" icon={icon} color={iconColor} />
+        <span>{title}</span>
+        <Divider inset />
+      </div>
+    </React.Fragment>
+  );
+}
+
+class Introduce extends Component {
+  render() {
+    return(
+      <React.Fragment>
+        <p>はじめまして。立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">@tachibanayu24</a>)と申します。<br />
+          都内在住のテック好きな男子です。</p>
+        <p>家庭の事情で高校を1年で中退して肉体労働者になりましたが、お金をためて高卒認定を取得し、都内の大学(工学部)へ進学。<br />
+          大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。<br />
+          2018年4月に港区の大手通信系SIerに新卒入社し、そこではビジネス開発の仕事をしています。
+        </p>
+        <p>
+          業務ではなかなかコードを書く機会を作れないので、プライベートでよくコーディングしています。<br />
+          一人称でサービス開発に携われるような技術を身につけることを目指して日々勉強中です。
+        </p>
+        <p>
+          好きなものはファッション、将棋、野球、海外ドラマです。
+        </p>
+      </React.Fragment>
+    );
+  }
+}
+
+const cards = [
+  {
+    image: "/static/images//works/portfolio.png",
+    title:'Reactでポートフォリオ作成',
+    date: '2018/10/8',
+    catLg: 'dev',
+    cat: ['React','Material-UI','farebase',],
+    body: 'このページです。はじめてのReactです。自身の成果を振り返ったり、モチベーションを保ったりするのに良さそうなので開発しました。フロントエンドの知識をつけたかったのでReactにしました。お気に入りポイントのappBarは、私のMacbookのターミナルのプロンプトを再現しています。',
+    ref: {
+      name: ['準備中', '', 'GitHub',],
+      url: ['#', '', 'https://github.com/tachibanayu24/my_portfolio',],
+    },
+  },
+  {
+    image: '/static/images//works/roulette.png',
+    title:'迷ったときにAlexaがルーレットしてくれるスキル',
+    date: '2018/10/2',
+    catLg: 'dev',
+    cat: ['Lambda','javaScript','VUI',],
+    body: 'はじめてのVUI/AlexaSkill開発。「Alexa。みんなのルーレットで都道府県やって。」などと命令するとランダムで都道府県を返してくれます。国名や料理名にも対応しています。ダーツの旅的なことをたまにやるので開発してみました。',
+    ref: {
+      name: ['準備中', '紹介ツイート', '',],
+      url: ['#', 'https://twitter.com/tachibanayu24/status/1046381193506091008', '',],
+    },
+  },
+  {
+    image: '/static/images//works/pytinps.png',
+    title:'暗黙知をMarkdown記法で共有するDjangoアプリ',
+    catLg: 'dev',
+    cat: ['Django','MySQL','EC2',],
+    date: '2018/9/17',
+    body: 'ハッカソン#2 in 新宿。初めてDjangoを使いました。内に秘められがちな暗黙知をMarkdown記法によって共有できるサービスです。要するにQiitaのエロ版です。'
+            + '開発メンバーの強い希望でアダルトなサービスになりました。現在開発途中でまだ完成していません。',
+    ref: {
+      name: ['準備中', '紹介ツイート', 'GitHub',],
+      url: ['#', 'https://twitter.com/tachibanayu24/status/1041700568492793856', 'https://github.com/tachibanayu24/py_slash_tinps',],
+    },
+  },
+  {
+    image: "/static/images//works/qiita-django.png",
+    title:'DjangoアプリをAWSにデプロイするクイックリファレンス',
+    date: '2018/9/11',
+    catLg: 'written',
+    cat: ['Django','Nginx','EC2',],
+    body: 'ハッカソン#2の前に、#1でハマりまくったAWSへのデプロイ手順を勉強する意味も込めてQiitaに記事を書いてみました。自分の記事の中では読まれることを意識して書きました。',
+    ref: {
+      name: ['紹介ツイート', 'Qiita', '',],
+      url: ['https://twitter.com/tachibanayu24/status/1039888739617595397', 'https://qiita.com/tachibanayu24/items/b8d73cdfd4cbd42c5b1d', '',],
+    },
+  },
+  {
+    image: '/static/images//works/incrude.png',
+    title:'仕事が辛い人を応援するWebアプリ',
+    catLg: 'dev',
+    cat: ['Rails','MySQL','EC2',],
+    date: '2018/8/23',
+    body: 'ハッカソン#1 in 大阪。初めて独自ドメインで公開したWebアプリです(現在は停止中)。TwitterAPIでユーザ登録し、一日一回就業後にスタンプを押します。'
+          + 'スタンプの個数に応じでアプリ内の労働環境が変化し、最終的に会社が爆発します。決して会社が嫌いなわけではなく、「もっとエッジ効かせたい」を繰り返していたらこうなってしまいました。',
+    ref: {
+      name: ['停止中', '紹介ツイート', 'GitHub'],
+      url: ['', 'https://twitter.com/tachibanayu24/status/1032619847216070656', 'https://github.com/tachibanayu24/incrude'],
+    },
+  },
+  {
+    image: "/static/images//works/100daysofcode.png",
+    title:'#100DaysOfCode 開始！',
+    date: '2018/8/1',
+    catLg: 'other',
+    cat: ['','','',],
+    body: '主にTwitterで流行っている?100日間コーディングをしてTwitterで報告するという、マラソンのような活動を始めます。忙しくても基本的には毎日やります。最初80日はインプットしつつ月1ペースでなにか作り、最後20日くらいで自分のWebサービスを作りたいと思います。',
+    ref: {
+      name: ['ツイート一覧', '', '',],
+      url: ['https://twitter.com/search?f=tweets&q=from%3Atachibanayu24%20%23100DaysOfCode', '', '',],
+    },
+  },
+]
+
+const chips = (cat) => {
+  if(cat === 'dev') {
+    return(
+      <Chip style={{backgroundColor: '#3CB371', color: '#fff', margin: 3 }} label="開発" className="chip" />
+    );
+  } else if(cat === 'written') {
+    return(
+      <Chip style={{backgroundColor: '#1E90FF', color: '#fff', margin: 3 }} label="書きもの" className="chip" />
+    );
+  } else if(cat === 'other') {
+    return(
+      <Chip style={{backgroundColor: 'grey', color: '#fff', margin: 3 }} label="その他" className="chip" />
+    );
+  } else if(cat === undefined || cat === '') {
+  } else {
+    return(
+      <Chip style={{backgroundColor: '#FF8C00', color: '#fff', margin: 3 }} label={cat} className="chip" />
+    );
+  }
+}
+
+const refs = (name, url) => {
+  if(name === undefined || name === '' ) {
+  } else if(name === '準備中' || name === '停止中') {
+    return (
+      <Button size="small" style={{textTransform: 'none', backgroundColor: 'grey', color: '#FFF'}}>
+        {name}
+      </Button>
+    );
+  } else {
+    return(
+      <Button size="small" style={{backgroundColor: '#00CED1' }}>
+        <a href={url} style={{ color: "white", textDecoration: "none" }} target="_blank" rel="noopener noreferrer">{name}</a>
+      </Button>
     );
   }
 }

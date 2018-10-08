@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: mplus-1p-regular;
-  src:url(./font/mplus-1p-regular.ttf)  format("truetype");
+  src:url(/static/font/mplus-1p-regular.ttf)  format("truetype");
 }
 
 @keyframes blink {
@@ -53,7 +53,9 @@ main {
 }
 
 .sub-content-body {
-  padding-left: 15px;
+  padding-left: 8px;
+  color: #263238;
+  font-size: 14px;
 }
 
 .skills {
@@ -69,7 +71,8 @@ main {
 
 .skill-details {
   display: block;
-  font-size: 12px
+  font-size: 12px;
+  margin-top: 7px;
 }
 
 .cardGrid {
