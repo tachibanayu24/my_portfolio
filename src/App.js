@@ -33,20 +33,20 @@ class App extends Component {
         cat: ['React','Material-UI','farebase',],
         body: 'はじめてのReact。自身の成果を振り返ったり、モチベーションを保ったりするのに良さそうなので開発しました。フロントエンドの知識をつけたかったのでReactにしました。お気に入りポイントのappBarは、私のMacbookのターミナルのプロンプトを再現しています。',
         ref: {
-          name: ['test', '', '',],
-          url: ['#', '', '',],
+          name: ['準備中', '', 'GitHub',],
+          url: ['#', '', 'https://github.com/tachibanayu24/my_portfolio',],
         },
       },
       {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
+        image: '/static/images//works/roulette.png',
         title:'迷ったときにAlexaがルーレットしてくれるスキル',
         date: '2018/10/2',
         catLg: 'dev',
         cat: ['Lambda','javaScript','VUI',],
         body: 'はじめてのVUI/AlexaSkill開発。「Alexa。みんなのルーレットで都道府県やって。」などと命令するとランダムで都道府県を返してくれます。国名や料理名にも対応しています。ダーツの旅的なことをたまにやるので開発してみました。',
         ref: {
-          name: ['testtest', '', '',],
-          url: ['#', '', '',],
+          name: ['準備中', '紹介ツイート', '',],
+          url: ['#', 'https://twitter.com/tachibanayu24/status/1046381193506091008', '',],
         },
       },
       {
@@ -57,8 +57,8 @@ class App extends Component {
         date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー',
         ref: {
-          name: ['test', '', '',],
-          url: ['#', '', '',],
+          name: ['準備中', '紹介ツイート', 'GitHub',],
+          url: ['#', 'https://twitter.com/tachibanayu24/status/1041700568492793856', 'https://github.com/tachibanayu24/py_slash_tinps',],
         },
       },
       {
@@ -69,20 +69,20 @@ class App extends Component {
         cat: ['Django','Nginx','EC2',],
         body: 'ハッカソン#2の前に、#1でハマりまくったAWSへのデプロイ手順を勉強する意味も込めてQiitaに記事を書いてみました。自分の記事の中では読まれることを意識して書きました。',
         ref: {
-          name: ['test', '', '',],
-          url: ['#', '', '',],
+          name: ['紹介ツイート', 'Qiita', '',],
+          url: ['https://twitter.com/tachibanayu24/status/1039888739617595397', 'https://qiita.com/tachibanayu24/items/b8d73cdfd4cbd42c5b1d', '',],
         },
       },
       {
-        image: 'https://www.nature-isere.fr/sites/default/files/styles/natureisere_large/public/images/espece/principale/cdroits_limites_lezard_vert_m_g._leblais_fileminimizer.jpg?itok=ijpkc5v-',
+        image: '/static/images//works/incrude.png',
         title:'仕事が辛い人を応援するWebアプリ',
         catLg: 'dev',
         cat: ['Rails','MySQL','EC2',],
         date: '2018/10/7',
         body: 'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー',
         ref: {
-          name: ['test', '', '',],
-          url: ['#', '', '',],
+          name: ['紹介ツイート', 'GitHub', '',],
+          url: ['https://twitter.com/tachibanayu24/status/1032619847216070656', 'https://github.com/tachibanayu24/incrude', '',],
         },
       },
       {
@@ -93,8 +93,8 @@ class App extends Component {
         cat: ['','','',],
         body: '主にTwitterで流行っている?100日間コーディングをしてTwitterで報告するという、マラソンのような活動を始めます。忙しくても基本的には毎日やります。最初80日はインプットしつつ月1ペースでなにか作り、最後20日くらいで自分のWebサービスを作りたいと思います。',
         ref: {
-          name: ['test', '', '',],
-          url: ['#', '', '',],
+          name: ['ツイート', '', '',],
+          url: ['https://twitter.com/search?f=tweets&q=from%3Atachibanayu24%20%23100DaysOfCode', '', '',],
         },
       },
     ]
@@ -120,10 +120,16 @@ class App extends Component {
     }
     const refs = (name, url) => {
       if(name === undefined || name === '' ) {
-      } else {
+      } else if(name === '準備中') {
+        return (
+          <Button size="small" style={{textTransform: 'none', backgroundColor: 'grey', color: '#FFF'}}>
+            {name}
+          </Button>
+        );
+      }else {
         return(
-          <Button size="small" style={{backgroundColor: '#DAA520', color: '#FFF'}}>
-            <a className="ref-link" href={url}>{name}</a>
+          <Button size="small" style={{backgroundColor: '#00CED1' }}>
+            <a href={url} style={{ color: "white", textDecoration: "none" }} target="_blank" rel="noopener noreferrer">{name}</a>
           </Button>
         );
       }
