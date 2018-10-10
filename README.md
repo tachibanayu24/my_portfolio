@@ -5,3 +5,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] 不要ファイル削除
 - [ ] skillsをコンポーネント化
 - [ ] cardをonClickで展開
+- [ ] favicon.icoを変える

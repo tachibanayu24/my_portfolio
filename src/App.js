@@ -28,7 +28,7 @@ class App extends Component {
       <React.Fragment>
         <AppBar position="sticky" style={{backgroundColor: '#022B36E0'}}>
           <Toolbar>
-            <Typography variant="title" color="inherit" style={{ fontSize: 18, fontFamily: 'Monaco', fontWeight: 900}} noWrap>
+            <Typography variant="title" color="inherit" style={{ fontSize: 18, fontFamily: 'Monaco', fontWeight: 500}} noWrap>
               <span style={{color: '#1E90FF' }}>~/YutoTachibana</span> <span style={{ color: '#FF6347' }}>❯</span><span style={{ color: '#A9A9A9'}}>❯❯ Portfolio<span className="blink">_</span></span>
             </Typography>
           </Toolbar>
@@ -232,7 +232,7 @@ class App extends Component {
         </main>
 
         <footer>
-          <p>copyright 2018- Yuto Tachibana</p>
+          <p>Last-Modified: 2018/10/10</p>
         </footer>
     </React.Fragment>
     );
@@ -287,12 +287,24 @@ const cards = [
     },
   },
   {
+    image: "/static/images//works/qiita-django-react.png",
+    title:'Django+Reactプロジェクト開発開始のチュートリアル',
+    date: '2018/10/10',
+    catLg: 'written',
+    cat: ['React','Django','',],
+    body: 'React+Djangoでなにか開発したいので調べてわかったことを書きました。',
+    ref: {
+      name: ['Qiita', '', '',],
+      url: ['https://qiita.com/tachibanayu24/items/282e09ccfe6089bb0476', '', '',],
+    },
+  },
+  {
     image: '/static/images//works/roulette.png',
     title:'迷ったときにAlexaがルーレットしてくれるスキル',
     date: '2018/10/2',
     catLg: 'dev',
     cat: ['Lambda','javaScript','VUI',],
-    body: 'はじめてのVUI/AlexaSkill開発。「Alexa。みんなのルーレットで都道府県やって。」などと命令するとランダムで都道府県を返してくれます。国名や料理名にも対応しています。ダーツの旅的なことをたまにやるので開発してみました。',
+    body: 'はじめてのVUI/AlexaSkill開発。「Alexa。みんなのルーレットで都道府県やって。」などと命令するとランダムで都道府県を返してくれます。国名や料理名にも対応しています。ダーツの旅的なことをたまにやるので開発してみました。公開申請の準備中です。',
     ref: {
       name: ['準備中', '紹介ツイート', '',],
       url: ['#', 'https://twitter.com/tachibanayu24/status/1046381193506091008', '',],
@@ -317,10 +329,10 @@ const cards = [
     date: '2018/9/11',
     catLg: 'written',
     cat: ['Django','Nginx','EC2',],
-    body: 'ハッカソン#2の前に、#1でハマりまくったAWSへのデプロイ手順を勉強する意味も込めてQiitaに記事を書いてみました。自分の記事の中では読まれることを意識して書きました。',
+    body: 'ハッカソン#2の前に、#1でハマりまくったAWSへのデプロイ手順を勉強する意味も込めてQiitaに記事を書いてみました。初めて読まれることを意識して書きました。',
     ref: {
-      name: ['紹介ツイート', 'Qiita', '',],
-      url: ['https://twitter.com/tachibanayu24/status/1039888739617595397', 'https://qiita.com/tachibanayu24/items/b8d73cdfd4cbd42c5b1d', '',],
+      name: ['Qiita', '', '',],
+      url: ['https://qiita.com/tachibanayu24/items/b8d73cdfd4cbd42c5b1d', '', '',],
     },
   },
   {
