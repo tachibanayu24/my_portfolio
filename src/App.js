@@ -120,7 +120,7 @@ class App extends Component {
                   <img src={require('./img/alexa.png')} style={{height: 63}} alt="alexa"/>
                   <span className="skill-name">Alexa Skill</span>
                     <span className="skill-details">
-                      個人でスキル開発をしたり、スマスピ最新動向というテーマで勉強会で発表したりしまいた。。
+                      個人でスキル開発をしたり、スマスピ最新動向というテーマで勉強会で発表したりしまいた。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
