@@ -280,7 +280,7 @@ const cards = [
     cat: ['React','Material-UI','farebase',],
     body: 'このページです。はじめてのReactです。自身の成果を振り返ったり、モチベーションを保ったりするのに良さそうなので開発しました。フロントエンドの知識をつけたかったのでReactにしました。お気に入りポイントのappBarは、私のMacbookのターミナルのプロンプトを再現しています。',
     ref: {
-      name: ['準備中', '', 'GitHub',],
+      name: ['サイトへ', '', 'GitHub',],
       url: ['#', '', 'https://github.com/tachibanayu24/my_portfolio',],
     },
   },
