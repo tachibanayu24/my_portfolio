@@ -219,11 +219,9 @@ class App extends Component {
 
               <Grid container style={{marginTop: 30 }}>
                 <Grid item lg={3} md={3} xs={1}></Grid>
-                <Grid item lg={2} md={2} xs={2} style={{textAlign: 'right'}} >
-                    <FontAwesomeIcon className="icons fa-2x" icon='envelope' style={{color: '#FF4500'}} />
-                </Grid>
-                <Grid item lg={4} md={4} xs={8} style={{fontSize: 13, textAlign: 'left', margin: 'auto', color: 'grey'}} >
-                    tachibanayu24<FontAwesomeIcon className="icon fa" icon='at' />gmail.com
+                <Grid item lg={6} md={6} xs={10}>
+                    <FontAwesomeIcon className="icons fa-lg" icon='envelope' style={{color: '#FF4500'}} />
+                    <span style={{fontSize: 13, color: 'grey'}}>tachibanayu24<FontAwesomeIcon className="icon fa" icon='at' />gmail.com</span>
                 </Grid>
                 <Grid item lg={3} md={3} xs={1}></Grid>
               </Grid>
