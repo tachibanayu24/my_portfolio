@@ -17,9 +17,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faDatabase, faEnvelope, faAt } from '@fortawesome/free-solid-svg-icons';
+import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faDatabase, faEnvelope, faAt, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faJs, faReact, faPython, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
-library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faEnvelope, faAt);
+library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faEnvelope, faAt, faHeart);
 library.add(fab, faJs, faReact, faPython, faDatabase, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub);
 
 class App extends Component {
@@ -218,21 +218,21 @@ class App extends Component {
               </Grid>
 
               <Grid container style={{marginTop: 30 }}>
-                <Grid item lg={4} md={4} xs={1}></Grid>
-                <Grid item lg={1} md={1} xs={2} style={{textAlign: 'right'}} >
+                <Grid item lg={3} md={3} xs={1}></Grid>
+                <Grid item lg={2} md={2} xs={2} style={{textAlign: 'right'}} >
                     <FontAwesomeIcon className="icons fa-2x" icon='envelope' style={{color: '#FF4500'}} />
                 </Grid>
-                <Grid item lg={3} md={3} xs={8} style={{textAlign: 'left', margin: 'auto', color: 'grey'}} >
+                <Grid item lg={4} md={4} xs={8} style={{fontSize: 13, textAlign: 'left', margin: 'auto', color: 'grey'}} >
                     tachibanayu24<FontAwesomeIcon className="icon fa" icon='at' />gmail.com
                 </Grid>
-                <Grid item lg={4} md={4} xs={1}></Grid>
+                <Grid item lg={3} md={3} xs={1}></Grid>
               </Grid>
             </div>
           </div>
         </main>
 
         <footer>
-          <p>Last-Modified: 2018/10/10</p>
+          <p><FontAwesomeIcon className="icon fa" icon="heart" style={{marginRight: 5, color: '#FF1493'}} />Last-Modified: 2018/10/10</p>
         </footer>
     </React.Fragment>
     );
