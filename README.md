@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## ToDo
 - [ ] 配列をコンポーネント化
@@ -6,3 +6,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] skillsをコンポーネント化
 - [ ] cardをonClickで展開
 - [ ] favicon.icoを変える
+- [ ] 文章を推敲する(文字数減らす)
