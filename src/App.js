@@ -17,9 +17,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faDatabase, faEnvelope, faAt } from '@fortawesome/free-solid-svg-icons';
+import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faDatabase, faEnvelope, faAt, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faJs, faReact, faPython, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
-library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faEnvelope, faAt);
+library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faEnvelope, faAt, faHeart);
 library.add(fab, faJs, faReact, faPython, faDatabase, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub);
 
 class App extends Component {
@@ -148,7 +148,7 @@ class App extends Component {
                   (cards, index) => {
                     return (
                       <Grid item lg={4} md={4} xs={12} key={index} style={{paddingBottom: 20}}>
-                        <Card className="card" style={{width: 340}}>
+                        <Card className="card" style={{width: 340, margin: 'auto'}}>
                             <CardMedia
                               className="media"
                               image={cards.image}
@@ -218,21 +218,19 @@ class App extends Component {
               </Grid>
 
               <Grid container style={{marginTop: 30 }}>
-                <Grid item lg={4} md={4} xs={1}></Grid>
-                <Grid item lg={1} md={1} xs={2} style={{textAlign: 'right'}} >
-                    <FontAwesomeIcon className="icons fa-2x" icon='envelope' style={{color: '#FF4500'}} />
+                <Grid item lg={3} md={3} xs={1}></Grid>
+                <Grid item lg={6} md={6} xs={10}>
+                    <FontAwesomeIcon className="icons fa-lg" icon='envelope' style={{color: '#FF4500'}} />
+                    <span style={{fontSize: 13, color: 'grey'}}>tachibanayu24<FontAwesomeIcon className="icon fa" icon='at' />gmail.com</span>
                 </Grid>
-                <Grid item lg={3} md={3} xs={8} style={{textAlign: 'left', margin: 'auto', color: 'grey'}} >
-                    tachibanayu24<FontAwesomeIcon className="icon fa" icon='at' />gmail.com
-                </Grid>
-                <Grid item lg={4} md={4} xs={1}></Grid>
+                <Grid item lg={3} md={3} xs={1}></Grid>
               </Grid>
             </div>
           </div>
         </main>
 
         <footer>
-          <p>Last-Modified: 2018/10/10</p>
+          <p><FontAwesomeIcon className="icon fa" icon="heart" style={{marginRight: 5, color: '#FF1493'}} />Last-Modified: 2018/10/10</p>
         </footer>
     </React.Fragment>
     );
@@ -282,7 +280,7 @@ const cards = [
     cat: ['React','Material-UI','farebase',],
     body: 'このページです。はじめてのReactです。自身の成果を振り返ったり、モチベーションを保ったりするのに良さそうなので開発しました。フロントエンドの知識をつけたかったのでReactにしました。お気に入りポイントのappBarは、私のMacbookのターミナルのプロンプトを再現しています。',
     ref: {
-      name: ['準備中', '', 'GitHub',],
+      name: ['サイトへ', '', 'GitHub',],
       url: ['#', '', 'https://github.com/tachibanayu24/my_portfolio',],
     },
   },
