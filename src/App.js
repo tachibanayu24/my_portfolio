@@ -148,7 +148,7 @@ class App extends Component {
                   (cards, index) => {
                     return (
                       <Grid item lg={4} md={4} xs={12} key={index} style={{paddingBottom: 20}}>
-                        <Card className="card" style={{width: 340}}>
+                        <Card className="card" style={{width: 340, margin: 'auto'}}>
                             <CardMedia
                               className="media"
                               image={cards.image}
