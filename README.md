@@ -7,3 +7,4 @@
 - [ ] cardをonClickで展開
 - [ ] favicon.icoを変える
 - [ ] 文章を推敲する(文字数減らす)
+- [ ] abbBarをタップで上に戻る

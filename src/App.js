@@ -54,42 +54,42 @@ class App extends Component {
                   <FontAwesomeIcon icon={['fab', 'js']} className="icons fa-4x" style={{color: '#FFD700'}} />
                   <span className="skill-name">JavaScript</span>
                   <span className="skill-details">
-                    Webアプリケーション開発などでよく書きます。
+                    Webアプリケーション開発でよく書きます。
                   </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'react']} className="icons fa-4x" style={{color: '#1E90FF'}} />
                   <span className="skill-name">React.js</span>
                     <span className="skill-details">
-                      勉強中です。このポートフォリオはReactで書いています。
+                      勉強中です。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <img src={require('./img/rails.png')} style={{height: 63}} alt="rails" />
                   <span className="skill-name">Ruby on Rails</span>
                     <span className="skill-details">
-                      RailsとMySQLでWebアプリをいくつか開発しました。
+                      Webアプリをいくつか開発しました。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'python']} className="icons fa-4x" style={{color: '#DAA520'}} />
                   <span className="skill-name">Python</span>
                     <span className="skill-details">
-                      勉強中です。Djangoを用いてWebアプリを開発しました。
+                      勉強中です。DjangoでWebアプリを開発しました。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <img src={require('./img/webrtc.png')} style={{height: 63}} alt="webrtc" />
                   <span className="skill-name">WebRTC</span>
                     <span className="skill-details">
-                      PeerJSで社内LANにおけるビデオチャットアプリを開発しました。SkyWayのチュートリアルもやりました。
+                      社内LANにサーバを立ててビデオチャットアプリを開発しました。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'linux']} className="icons fa-4x" style={{color: '#2F4F4F'}} />
                   <span className="skill-name">Linux</span>
                     <span className="skill-details">
-                      学生のころからよく触っています。CUIの基本的な操作はできます。
+                      学生のころからよく触っています。
                     </span>
                 </Grid>
               </Grid>
@@ -98,43 +98,42 @@ class App extends Component {
                   <FontAwesomeIcon icon={['fab', 'docker']} className="icons fa-4x" style={{color: '#1E90FF'}} />
                   <span className="skill-name">Docker</span>
                     <span className="skill-details">
-                      学生時代の研究テーマです。<a href="https://hub.docker.com/r/tachibanayu24/exp3/" target="_blank" rel="noopener noreferrer">DockerHub</a>で研究用のイメージを公開しています。
-                      <a href="https://www.computer.org/csdl/proceedings/candar/2017/2087/00/2087a580-abs.html" target="_blank" rel="noopener noreferrer">学会発表</a>も。
+                      学生時代の研究テーマで<a href="https://www.computer.org/csdl/proceedings/candar/2017/2087/00/2087a580-abs.html" target="_blank" rel="noopener noreferrer">学会発表</a>も何度か。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'aws']} className="icons fa-4x" style={{color: '#FF8C00'}} />
                   <span className="skill-name">AWS</span>
                     <span className="skill-details">
-                      EC2, ECS, Lambda, S3, RDS, Route53, Batchなど。環境構築やデプロイの経験が何度かあります。
+                      EC2, ECS, Lambda, S3, RDSなど。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'github-alt']} className="icons fa-4x" style={{color: '#778899'}} />
                   <span className="skill-name">GitHub</span>
                     <span className="skill-details">
-                      個人開発やハッカソンでよく使っています。
+                      個人開発やハッカソンでよく使います。。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <img src={require('./img/alexa.png')} style={{height: 63}} alt="alexa"/>
                   <span className="skill-name">Alexa Skill</span>
                     <span className="skill-details">
-                      個人でスキル開発をしたり、スマスピ最新動向というテーマで勉強会で発表したりしまいた。。
+                      個人でスキル開発や社内勉強会の講師など。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <FontAwesomeIcon icon={['fab', 'slack-hash']} className="icons fa-4x" style={{color: '#3CB371'}} />
                   <span className="skill-name">Slack</span>
                     <span className="skill-details">
-                      ベンチャーにいた頃、Slackを社内に導入する業務を担当しました。簡単なアプリも開発しました。
+                      社内への導入を担当。bot開発も。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
                   <img src={require('./img/gas.png')} style={{height: 63}} alt="gas"/>
                   <span className="skill-name">Google Apps Script</span>
                     <span className="skill-details">
-                      ベンチャーにいた頃、SpreadsheetにGASを適用して業務改善を行いました。
+                      自動化による業務改善を担当。
                     </span>
                 </Grid>
               </Grid>
@@ -230,7 +229,9 @@ class App extends Component {
         </main>
 
         <footer>
-          <p><FontAwesomeIcon className="icon fa" icon="heart" style={{marginRight: 5, color: '#FF1493'}} />Last-Modified: 2018/10/10</p>
+          <p><FontAwesomeIcon className="icon fa" icon="heart" style={{marginRight: 5, color: '#FF1493'}} />
+            Last-Modified: 2018/10/11
+          </p>
         </footer>
     </React.Fragment>
     );
@@ -254,17 +255,14 @@ class Introduce extends Component {
     return(
       <React.Fragment>
         <p>はじめまして。立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">@tachibanayu24</a>)と申します。<br />
-          都内在住のテック好きな男子です。</p>
-        <p>家庭の事情で高校を1年で中退して肉体労働者になりましたが、お金をためて高卒認定を取得し、都内の大学(工学部)へ進学。<br />
+          好きなものはファッション、将棋、野球、海外ドラマです。</p>
+        <p>家庭の事情で高校中退して肉体労働者になりましたが、お金をためて高卒認定を取得、都内の大学(工学部)へ進学しました。<br />
           大学に通いながら新宿のベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。<br />
-          2018年4月に港区の大手通信系SIerに新卒入社し、そこではビジネス開発の仕事をしています。
+          2018年4月に港区の大手通信系SIerに新卒入社し、ビジネス開発の仕事をしています。
         </p>
         <p>
-          業務ではなかなかコードを書く機会を作れないので、プライベートでよくコーディングしています。<br />
+          ものづくりが好きなのでプライベートでよくコーディングしています。<br />
           一人称でサービス開発に携われるような技術を身につけることを目指して日々勉強中です。
-        </p>
-        <p>
-          好きなものはファッション、将棋、野球、海外ドラマです。
         </p>
       </React.Fragment>
     );
@@ -275,7 +273,7 @@ const cards = [
   {
     image: "/static/images//works/portfolio.png",
     title:'Reactでポートフォリオ作成',
-    date: '2018/10/8',
+    date: '2018/10/10',
     catLg: 'dev',
     cat: ['React','Material-UI','farebase',],
     body: 'このページです。はじめてのReactです。自身の成果を振り返ったり、モチベーションを保ったりするのに良さそうなので開発しました。フロントエンドの知識をつけたかったのでReactにしました。お気に入りポイントのappBarは、私のMacbookのターミナルのプロンプトを再現しています。',
@@ -302,7 +300,7 @@ const cards = [
     date: '2018/10/2',
     catLg: 'dev',
     cat: ['Lambda','javaScript','VUI',],
-    body: 'はじめてのVUI/AlexaSkill開発。「Alexa。みんなのルーレットで都道府県やって。」などと命令するとランダムで都道府県を返してくれます。国名や料理名にも対応しています。ダーツの旅的なことをたまにやるので開発してみました。公開申請の準備中です。',
+    body: 'はじめてのAlexaSkill開発。「Alexa。みんなのルーレットで都道府県やって。」でランダムに都道府県を返します。国名や料理名にも対応しています。ダーツの旅をたまにやるので開発してみました。公開申請の準備中です。',
     ref: {
       name: ['準備中', '紹介ツイート', '',],
       url: ['#', 'https://twitter.com/tachibanayu24/status/1046381193506091008', '',],
@@ -315,7 +313,7 @@ const cards = [
     cat: ['Django','MySQL','EC2',],
     date: '2018/9/17',
     body: 'ハッカソン#2 in 新宿。初めてDjangoを使いました。内に秘められがちな暗黙知をMarkdown記法によって共有できるサービスです。要するにQiitaのエロ版です。'
-            + '開発メンバーの強い希望でアダルトなサービスになりました。現在開発途中でまだ完成していません。',
+            + 'メンバーの強い希望でアダルトなサービスになりました。現在開発途中でまだ完成していません。',
     ref: {
       name: ['準備中', '紹介ツイート', 'GitHub',],
       url: ['#', 'https://twitter.com/tachibanayu24/status/1041700568492793856', 'https://github.com/tachibanayu24/py_slash_tinps',],
@@ -327,7 +325,7 @@ const cards = [
     date: '2018/9/11',
     catLg: 'written',
     cat: ['Django','Nginx','EC2',],
-    body: 'ハッカソン#2の前に、#1でハマりまくったAWSへのデプロイ手順を勉強する意味も込めてQiitaに記事を書いてみました。初めて読まれることを意識して書きました。',
+    body: 'ハッカソン#2の前に、#1でハマったデプロイ手順を勉強する意味も込めてQiitaに記事を投稿しました。初めて読まれることを意識して書きました。',
     ref: {
       name: ['Qiita', '', '',],
       url: ['https://qiita.com/tachibanayu24/items/b8d73cdfd4cbd42c5b1d', '', '',],
@@ -340,7 +338,7 @@ const cards = [
     cat: ['Rails','MySQL','EC2',],
     date: '2018/8/23',
     body: 'ハッカソン#1 in 大阪。初めて独自ドメインで公開したWebアプリです(現在は停止中)。TwitterAPIでユーザ登録し、一日一回就業後にスタンプを押します。'
-          + 'スタンプの個数に応じでアプリ内の労働環境が変化し、最終的に会社が爆発します。決して会社が嫌いなわけではなく、「もっとエッジ効かせたい」を繰り返していたらこうなってしまいました。',
+          + 'スタンプ数に応じてアプリ内の労働環境が変化し、最終的に会社が爆発します。会社が嫌いなわけではなく「もっとエッジ効かせたい」を繰り返したらこうなってしまいました。',
     ref: {
       name: ['停止中', '紹介ツイート', 'GitHub'],
       url: ['', 'https://twitter.com/tachibanayu24/status/1032619847216070656', 'https://github.com/tachibanayu24/incrude'],
@@ -352,7 +350,7 @@ const cards = [
     date: '2018/8/1',
     catLg: 'other',
     cat: ['','','',],
-    body: '主にTwitterで流行っている?100日間コーディングをしてTwitterで報告するという、マラソンのような活動を始めます。忙しくても基本的には毎日やります。最初80日はインプットしつつ月1ペースでなにか作り、最後20日くらいで自分のWebサービスを作りたいと思います。',
+    body: '100日間コーディングをしてTwitterで報告するという、マラソンのような活動を始めます。最初80日はインプットしつつ月1ペースでなにか作り、最後20日くらいで自分のWebサービスを作りたい。',
     ref: {
       name: ['ツイート一覧', '', '',],
       url: ['https://twitter.com/search?f=tweets&q=from%3Atachibanayu24%20%23100DaysOfCode', '', '',],
