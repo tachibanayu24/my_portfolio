@@ -112,7 +112,7 @@ class App extends Component {
                   <FontAwesomeIcon icon={['fab', 'github-alt']} className="icons fa-4x" style={{color: '#778899'}} />
                   <span className="skill-name">GitHub</span>
                     <span className="skill-details">
-                      個人開発やハッカソンでよく使います。。
+                      個人開発やハッカソンでよく使います。
                     </span>
                 </Grid>
                 <Grid item lg={2} md={2} xs={4} className="skills">
