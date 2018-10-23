@@ -232,7 +232,7 @@ class App extends Component {
 
         <footer>
           <p><FontAwesomeIcon className="icon fa" icon="heart" style={{marginRight: 5, color: '#FF1493'}} />
-            Last-Modified: 2018/10/11
+            Last-Modified: 2018/10/23
           </p>
         </footer>
 
