@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import ScrollToTop from 'react-scroll-up';
+
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Card from '@material-ui/core/Card';
@@ -17,15 +19,15 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faDatabase, faEnvelope, faAt, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faDatabase, faEnvelope, faAt, faHeart, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { faJs, faReact, faPython, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
-library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faEnvelope, faAt, faHeart);
+library.add(faFlushed, faCode, faPenFancy, faHandshake, faCameraRetro, faEnvelope, faAt, faHeart, faChevronCircleUp);
 library.add(fab, faJs, faReact, faPython, faDatabase, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub);
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <>
         <AppBar position="sticky" style={{backgroundColor: '#022B36E0'}}>
           <Toolbar>
             <Typography variant="title" color="inherit" style={{ fontSize: 18, fontFamily: 'Monaco', fontWeight: 500}} noWrap>
@@ -233,27 +235,31 @@ class App extends Component {
             Last-Modified: 2018/10/11
           </p>
         </footer>
-    </React.Fragment>
+
+        <ScrollToTop showUnder={160}>
+              <FontAwesomeIcon className="icon fa-3x" icon="chevron-circle-up" style={{color: '#022B3677'}} />
+        </ScrollToTop>
+    </>
     );
   }
 }
 
 const contentTitle = (title, icon, iconColor) => {
   return(
-    <React.Fragment>
+    <>
       <div className="content-title">
         <FontAwesomeIcon className="icons fa-lg" icon={icon} color={iconColor} />
         <span>{title}</span>
         <Divider inset />
       </div>
-    </React.Fragment>
+    </>
   );
 }
 
 class Introduce extends Component {
   render() {
     return(
-      <React.Fragment>
+      <>
         <p>はじめまして。立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">@tachibanayu24</a>)と申します。<br />
           好きなものはファッション、将棋、野球、海外ドラマです。</p>
         <p>家庭の事情で高校中退して肉体労働者になりましたが、お金をためて高卒認定を取得、都内の大学(工学部)へ進学しました。<br />
@@ -264,7 +270,7 @@ class Introduce extends Component {
           ものづくりが好きなのでプライベートでよくコーディングしています。<br />
           一人称でサービス開発に携われるような技術を身につけることを目指して日々勉強中です。
         </p>
-      </React.Fragment>
+      </>
     );
   }
 }
