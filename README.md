@@ -3,11 +3,12 @@
 https://yuto-tachibana.firebaseapp.com/
 
 ## ToDo
-- [ ] 配列をコンポーネント化
-- [ ] 不要ファイル削除
-- [ ] skillsをコンポーネント化
-- [ ] cardをonClickで展開
+- [x] 不要ファイル削除
+- [x] 各要素をコンポーネント化する
+- [ ] cardsが多すぎるのでonClickで展開する
 - [x] favicon.icoを変える
-- [ ] 文章を推敲する(文字数減らす)
-- [x] scrollToTop追加
+- [x] 文章を推敲する(文字数減らす)
+- [x] scrollToTop追加する
 - [ ] cardをfilter()でカテゴリ別に表示できるようにする
+- [ ] staticファイルの置き場どこが適切か調べて再配置
+- [ ] CSSのリファクタリング
