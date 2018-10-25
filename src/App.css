@@ -26,12 +26,12 @@
   position: relative;
 }
 
-div {
-  /* border: solid 0.1px; */
-}
+/* div {
+  border: solid 0.1px;
+} */
 
 main {
-  margin: 40px 3px;
+  margin: 20px 3px;
 }
 
 .sub-content {
@@ -45,8 +45,8 @@ main {
 }
 
 .sub-content-image img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 70%;
+  max-height: 70%;
   margin: auto;
   padding: 30px;
   border-radius: 50%;
@@ -60,18 +60,18 @@ main {
 
 .skills {
   text-align: center;
-  padding: 5px;
+  padding: 7px;
 }
 
 .skill-name {
   display: block;
   font-family: Monaco, 'Courier New';
-  font-size: 14px
+  font-size: 12px
 }
 
 .skill-details {
   display: block;
-  font-size: 12px;
+  font-size: 11px;
   margin-top: 7px;
 }
 
@@ -83,6 +83,7 @@ footer {
   font-size: 12px;
   color: grey;
   text-align: center;
+  margin-top: 40px;
 }
 
 .radius25 {
