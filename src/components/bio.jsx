@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 import ContentTitle from './contentTitle';
 
 import Grid from '@material-ui/core/Grid';

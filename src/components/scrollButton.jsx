@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 import ScrollToTop from 'react-scroll-up';
 
 import { library } from '@fortawesome/fontawesome-svg-core';

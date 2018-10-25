@@ -1,14 +1,92 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  font-waight: 300;
+}
+
+@font-face {
+  font-family: mplus-1p-regular;
+  src:url(/static/font/mplus-1p-regular.ttf)  format("truetype");
+}
+
+@keyframes blink {
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes blink {
+  50% { opacity: 0.0; }
+}
+.blink {
+  animation: blink 1s step-end infinite;
+  -webkit-animation: blink 1s step-end infinite;
+}
+
+.icons {
+  margin-right: 10px;
+}
+
+.appBar {
+  position: relative;
+}
+
+main {
+  margin: 20px 3px;
+}
+
+.sub-content {
+  padding: 5px;
+  margin: 5px;
+}
+
+.content-title {
+  font-family: Monaco, 'Courier New';
+  font-size: 24px;
+}
+
+.sub-content-image img {
+  max-width: 70%;
+  max-height: 70%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+.sub-content-body {
+  padding-left: 8px;
+  color: #263238;
+  font-size: 14px;
+}
+
+.skills {
+  text-align: center;
+  padding: 7px;
+}
+
+.skill-name {
+  display: block;
+  font-family: Monaco, 'Courier New';
+  font-size: 12px
+}
+
+.skill-details {
+  display: block;
+  font-size: 11px;
+  margin-top: 7px;
+}
+
+.cardGrid {
+  margin: 40px 0;
+}
+
+footer {
+  font-size: 12px;
+  color: grey;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.radius25 {
+  border-radius: 25%;
 }
