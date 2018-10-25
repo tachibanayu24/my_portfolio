@@ -3,10 +3,6 @@ body {
   padding: 0;
 }
 
-* {
-  font-waight: 300;
-}
-
 @font-face {
   font-family: mplus-1p-regular;
   src:url(/static/font/mplus-1p-regular.ttf)  format("truetype");
