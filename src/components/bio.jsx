@@ -7,14 +7,16 @@ const Bio = () => {
   return(
     <>
       { ContentTitle('bio', 'flushed', '#C71585')}
-      <Grid container>
-        <Grid item lg={2} md={2} xs={12} style={{margin: 'auto'}}>
-          <div className="sub-content-image"> <img src={require('../img/profile.png')} alt="profile" /> </div>
+      <div className="sub-content-body">
+        <Grid container>
+          <Grid item lg={3} md={3} xs={12}>
+            <img className="bio-img" src={require('../img/profile.png')} alt="profile" />
+          </Grid>
+          <Grid item lg={9} md={9} xs={12}>
+            <div className="sub-content-body"> <Introduce /> </div>
+          </Grid>
         </Grid>
-        <Grid item lg={10} md={10} xs={12}>
-          <div className="sub-content-body"> <Introduce /> </div>
-        </Grid>
-      </Grid>
+      </div>
     </>
   );
 }

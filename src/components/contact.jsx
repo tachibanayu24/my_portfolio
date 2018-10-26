@@ -11,7 +11,7 @@ const Header = () => {
   return(
     <>
       { ContentTitle('SNS/Contact', 'handshake', '#4682B4')}
-      <div style={{textAlign: 'center', marginTop: 20}}>
+      <div className="sub-content-body" style={{textAlign: 'center', marginTop: 20}}>
         <Grid container>
           <Grid item lg={12} md={12} xs={12}>
             <span style={{color: '#2F4F4F', fontSize: 12}}>面談や受諾開発など、お気軽にお問合せください<br />
@@ -38,7 +38,7 @@ const Header = () => {
           </Grid>
           <Grid item lg={1} md={1} xs={2}>
             <a href="https://qiita.com/tachibanayu24" target="_blank" rel="noopener noreferrer">
-              <img src={require('../img/qiita.png')} style={{height: 34}} className="radius25" alt="qiita" />
+              <img src={require('../img/qiita.png')} className="iconizer-sm" alt="qiita" />
             </a>
           </Grid>
           <Grid item lg={4} md={4} xs={2}></Grid>
