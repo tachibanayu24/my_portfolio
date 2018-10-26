@@ -3,11 +3,19 @@ body {
   padding: 0;
 }
 
+.body-animation {
+  -webkit-animation-duration: 1s;
+  animation-delay:1s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
 @font-face {
   font-family: mplus-1p-regular;
   src:url(/static/font/mplus-1p-regular.ttf)  format("truetype");
 }
 
+/* appBarのカーソルの点滅 */
 @keyframes blink {
   50% { opacity: 0.0; }
 }
@@ -19,16 +27,9 @@ body {
   -webkit-animation: blink 1s step-end infinite;
 }
 
+/* コンテンツのタイトルのアイコンと文字の間 */
 .icons {
   margin-right: 10px;
-}
-
-.appBar {
-  position: relative;
-}
-
-main {
-  margin: 20px 3px;
 }
 
 .sub-content {
@@ -41,18 +42,18 @@ main {
   font-size: 24px;
 }
 
-.sub-content-image img {
-  max-width: 70%;
-  max-height: 70%;
-  margin: auto;
-  padding: 30px;
+.bio-img {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
+  display: block;
+  margin: auto;
 }
 
 .sub-content-body {
-  padding-left: 8px;
+  margin: 13px;
   color: #263238;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .skills {
@@ -69,11 +70,29 @@ main {
 .skill-details {
   display: block;
   font-size: 11px;
-  margin-top: 7px;
+  margin-top: 5px;
 }
 
 .cardGrid {
   margin: 40px 0;
+}
+
+.card-content {
+  width: 320px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.card-chips {
+  color: #fff;
+  margin: 3px;
+  font-size: 8px;
 }
 
 footer {
@@ -83,6 +102,12 @@ footer {
   margin-top: 40px;
 }
 
-.radius25 {
+.iconizer-lg {
   border-radius: 25%;
+  height: 48px;
+}
+
+.iconizer-sm {
+  border-radius: 25%;
+  height: 27px;
 }

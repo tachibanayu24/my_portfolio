@@ -17,7 +17,7 @@ const cards = [
     title:'Reactでポートフォリオ作成',
     date: '2018/10/10',
     catLg: 'dev',
-    cat: ['React','Material-UI','farebase',],
+    cat: ['React','JS','farebase',],
     body: 'このページです。はじめてのReactです。自身の成果を振り返ったり、モチベーションを保ったりするのに良さそうなので開発しました。フロントエンドの知識をつけたかったのでReactにしました。お気に入りポイントのappBarは、私のMacbookのターミナルのプロンプトを再現しています。',
     ref: {
       name: ['サイトへ', '', 'GitHub',],
@@ -41,7 +41,7 @@ const cards = [
     title:'迷ったときにAlexaがルーレットしてくれるスキル',
     date: '2018/10/2',
     catLg: 'dev',
-    cat: ['Lambda','javaScript','VUI',],
+    cat: ['Lambda','JS','VUI',],
     body: 'はじめてのAlexaSkill開発。「Alexa。みんなのルーレットで都道府県やって。」でランダムに都道府県を返します。国名や料理名にも対応しています。ダーツの旅をたまにやるので開発してみました。公開申請の準備中です。',
     ref: {
       name: ['準備中', '紹介ツイート', '',],
@@ -104,22 +104,30 @@ const cards = [
 const chips = (cat) => {
   if(cat === 'dev') {
     return(
-      <Chip style={{backgroundColor: '#3CB371', color: '#fff', margin: 3 }} label="開発" className="chip" />
+      <Chip style={{...chipsStyle, backgroundColor: '#3CB371'}} label="開発" className="chip" />
     );
   } else if(cat === 'written') {
     return(
-      <Chip style={{backgroundColor: '#1E90FF', color: '#fff', margin: 3 }} label="書きもの" className="chip" />
+      <Chip style={{...chipsStyle, backgroundColor: '#1E90FF'}} label="書きもの" className="chip" />
     );
   } else if(cat === 'other') {
     return(
-      <Chip style={{backgroundColor: 'grey', color: '#fff', margin: 3 }} label="その他" className="chip" />
+      <Chip style={{...chipsStyle, backgroundColor: 'grey'}} label="その他" className="chip" />
     );
   } else if(cat === undefined || cat === '') {
   } else {
     return(
-      <Chip style={{backgroundColor: '#FF8C00', color: '#fff', margin: 3 }} label={cat} className="chip" />
+      <Chip style={{...chipsStyle, backgroundColor: '#FF8C00'}} label={cat} className="chip" />
     );
   }
+}
+
+const chipsStyle = {
+  color: '#fff',
+  marginLeft: 2,
+  fontSize: 12,
+  fontWeight: 300,
+  height: 20,
 }
 
 // cards.refs.nameの値によってbuttonの色を変える
@@ -127,17 +135,22 @@ const refs = (name, url) => {
   if(name === undefined || name === '' ) {
   } else if(name === '準備中' || name === '停止中') {
     return (
-      <Button size="small" style={{textTransform: 'none', backgroundColor: 'grey', color: '#FFF'}}>
+      <Button size="small" style={{...refsStyle, backgroundColor: 'grey'}}>
         {name}
       </Button>
     );
   } else {
     return(
-      <Button size="small" style={{backgroundColor: '#00CED1' }}>
-        <a href={url} style={{ color: "white", textDecoration: "none" }} target="_blank" rel="noopener noreferrer">{name}</a>
+      <Button size="small" style={{...refsStyle, backgroundColor: '#00CED1'}}>
+        <a href={url} style={refsStyle} target="_blank" rel="noopener noreferrer">{name}</a>
       </Button>
     );
   }
+}
+
+const refsStyle = {
+  textDecoration: 'none',
+  color: '#FFF',
 }
 
 // すべてのcardsの値をカード形式の表示に整形して返す
@@ -145,48 +158,49 @@ const Work = () => {
   return(
     <>
       { ContentTitle('works/activities', 'pen-fancy', '#FF6347')}
-      <Grid container className="cardGrid">
-        {
-          cards.map(
-            (cards, index) => {
-              return (
-                <Grid item lg={4} md={4} xs={12} key={index} style={{paddingBottom: 20}}>
-                  <Card className="card" style={{width: 340, margin: 'auto'}}>
-                      <CardMedia
-                        className="media"
-                        image={cards.image}
-                        style={{height: 200, width: 340}}
-                      />
-
-                      <CardContent>
-                        <Typography style={{fontSize: 16, fontWeight: 600, marginBottom: 5}}> {cards.title} </Typography>
-                        <Typography variant="body2" component="span">
-                          <Grid container>
-                            <Grid item xs={3} style={{margin: 'auto'}}>
-                              <div>{cards.date}</div>
-                            </Grid>
-                            <Grid item xs={9}>
-                              {chips(cards.catLg)}
-                              {chips(cards.cat[0])}
-                              {chips(cards.cat[1])}
-                              {chips(cards.cat[2])}
-                            </Grid>
-                          </Grid>
-                        </Typography>
-                        <hr />
-                        <Typography variant="body1" component="span"> {cards.body} </Typography>
-                      </CardContent>
-                      <CardActions style={{textDecoration: 'none'}}>
-                        {refs(cards.ref.name[0], cards.ref.url[0])}
-                        {refs(cards.ref.name[1], cards.ref.url[1])}
-                        {refs(cards.ref.name[2], cards.ref.url[2])}
-                      </CardActions>
-                  </Card>
-                </Grid>
-              );
-            })
-        }
-      </Grid>
+      <div className="sub-content-body">
+        <Grid container className="cardGrid">
+          {
+            cards.map(
+              (cards, index) => {
+                return (
+                  <Grid item lg={4} md={4} xs={12} key={index}>
+                      <Card className="card card-content">
+                          <CardMedia
+                            className="media"
+                            image={cards.image}
+                            style={{height: 200, width: 340}}
+                          />
+                          <CardContent>
+                            <span className="card-title"> {cards.title} </span>
+                            <Typography variant="body2" component="span">
+                              <Grid container>
+                                <Grid item xs={3} style={{margin: 'auto', fontSize: 12, fontWeight: 200}}>
+                                  <div>{cards.date}</div>
+                                </Grid>
+                                <Grid item xs={9}>
+                                  {chips(cards.catLg)}
+                                  {chips(cards.cat[0])}
+                                  {chips(cards.cat[1])}
+                                  {chips(cards.cat[2])}
+                                </Grid>
+                              </Grid>
+                            </Typography>
+                            <hr />
+                            <Typography variant="body1" component="span"> {cards.body} </Typography>
+                          </CardContent>
+                          <CardActions style={{textDecoration: 'none'}}>
+                            {refs(cards.ref.name[0], cards.ref.url[0])}
+                            {refs(cards.ref.name[1], cards.ref.url[1])}
+                            {refs(cards.ref.name[2], cards.ref.url[2])}
+                          </CardActions>
+                      </Card>
+                  </Grid>
+                );
+              })
+          }
+        </Grid>
+      </div>
     </>
   );
 }

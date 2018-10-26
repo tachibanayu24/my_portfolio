@@ -11,4 +11,5 @@ https://yuto-tachibana.firebaseapp.com/
 - [x] scrollToTop追加する
 - [ ] cardをfilter()でカテゴリ別に表示できるようにする
 - [ ] staticファイルの置き場どこが適切か調べて再配置
-- [ ] CSSのリファクタリング
+- [x] CSSのリファクタリング
+- [ ] workやbioに軽量なCSSアニメーションをさりげなく追加する
