@@ -22,3 +22,7 @@ yarn-error.log*
 
 # 各種key
 .env
+
+# firebase
+/.firebase/
+.firebaserc
