@@ -157,7 +157,7 @@ const refsStyle = {
 const Work = () => {    
   return(
     <>
-      { ContentTitle('works/activities', 'pen-fancy', '#FF6347')}
+      { ContentTitle('Works/Activities', 'pen-fancy', '#FF6347')}
       <div className="sub-content-body">
       {/* <div className="sortCards">
         <Button onClick={cards = cards.filter(str => str.catLg === 'dev')}>開発</Button>
