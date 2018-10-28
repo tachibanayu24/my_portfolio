@@ -159,12 +159,12 @@ const Work = () => {
     <>
       { ContentTitle('works/activities', 'pen-fancy', '#FF6347')}
       <div className="sub-content-body">
-      <div className="sortCards">
+      {/* <div className="sortCards">
         <Button onClick={cards = cards.filter(str => str.catLg === 'dev')}>開発</Button>
         <Button>書きもの</Button>
         <Button>その他</Button>
       </div>
-        { console.log(cards.filter(str => str.catLg === 'dev')) }
+        { console.log(cards.filter(str => str.catLg === 'dev')) } */}
         <Grid container className="cardGrid">
           {
             cards.map(
