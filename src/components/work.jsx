@@ -11,7 +11,7 @@ import Chip from '@material-ui/core/Chip';
 import Typography from '@material-ui/core/Typography';
 
 // 配列を追加することで表示されるカードが追加される
-const cards = [
+let cards = [
   {
     image: "/static/images//works/portfolio.png",
     title:'Reactでポートフォリオ作成',
@@ -159,6 +159,12 @@ const Work = () => {
     <>
       { ContentTitle('works/activities', 'pen-fancy', '#FF6347')}
       <div className="sub-content-body">
+      {/* <div className="sortCards">
+        <Button onClick={cards = cards.filter(str => str.catLg === 'dev')}>開発</Button>
+        <Button>書きもの</Button>
+        <Button>その他</Button>
+      </div>
+        { console.log(cards.filter(str => str.catLg === 'dev')) } */}
         <Grid container className="cardGrid">
           {
             cards.map(
