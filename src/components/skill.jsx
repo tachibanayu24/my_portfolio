@@ -10,7 +10,7 @@ library.add(fab, faJs, faReact, faPython, faAws, faSlackHash, faLinux, faTwitter
 const Skill = () => {
   return(
     <>
-      { ContentTitle('Tech skills', 'code', '#ADFF2F')}
+      { ContentTitle('Tech Skills', 'code', '#ADFF2F')}
         <div className="sub-content-body">
           <Grid container>
             <Grid item lg={1} md={1}></Grid>

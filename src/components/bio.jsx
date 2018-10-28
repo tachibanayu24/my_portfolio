@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 const Bio = () => {
   return(
     <>
-      { ContentTitle('bio', 'flushed', '#C71585')}
+      { ContentTitle('Bio', 'flushed', '#C71585')}
       <div className="sub-content-body">
         <Grid container>
           <Grid item lg={3} md={3} xs={12}>
