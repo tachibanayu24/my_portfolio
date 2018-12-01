@@ -154,7 +154,7 @@ const refsStyle = {
 }
 
 // すべてのcardsの値をカード形式の表示に整形して返す
-const Work = () => {    
+const Work = () => {
   return(
     <>
       { ContentTitle('Works/Activities', 'pen-fancy', '#FF6347')}
