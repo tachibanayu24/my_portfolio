@@ -10,7 +10,7 @@ const Bio = () => {
       <div className="sub-content-body">
         <Grid container>
           <Grid item lg={3} md={3} xs={12}>
-            <img className="bio-img" src={require('../img/profile.png')} alt="profile" />
+            <img className="bio-img" src={require('../img/icons/profile.png')} alt="profile" />
           </Grid>
           <Grid item lg={9} md={9} xs={12}>
             <div className="sub-content-body"> <Introduce /> </div>

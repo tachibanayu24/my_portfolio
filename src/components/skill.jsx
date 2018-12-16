@@ -29,7 +29,7 @@ const Skill = () => {
                 </span>
             </Grid>
             <Grid item lg={2} md={2} xs={4} className="skills">
-              <img src={require('../img/rails.png')} className="iconizer-lg" alt="rails" />
+              <img src={require('../img/icons/rails.png')} className="iconizer-lg" alt="rails" />
               <span className="skill-name">Ruby on Rails</span>
                 <span className="skill-details">
                   Webアプリをいくつか開発しました。
@@ -43,7 +43,7 @@ const Skill = () => {
                 </span>
             </Grid>
             <Grid item lg={2} md={2} xs={4} className="skills">
-              <img src={require('../img/webrtc.png')} className="iconizer-lg" alt="webrtc" />
+              <img src={require('../img/icons/webrtc.png')} className="iconizer-lg" alt="webrtc" />
               <span className="skill-name">WebRTC</span>
                 <span className="skill-details">
                   社内LANにサーバを立ててビデオチャットアプリを開発しました。
@@ -73,7 +73,7 @@ const Skill = () => {
                 </span>
             </Grid>
             <Grid item lg={2} md={2} xs={4} className="skills">
-              <img src={require('../img/alexa.png')} className="iconizer-lg" alt="alexa"/>
+              <img src={require('../img/icons/alexa.png')} className="iconizer-lg" alt="alexa"/>
               <span className="skill-name">Alexa Skill</span>
                 <span className="skill-details">
                   個人でスキル開発や社内勉強会の講師など。

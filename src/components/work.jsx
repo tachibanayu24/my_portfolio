@@ -13,6 +13,18 @@ import Typography from '@material-ui/core/Typography';
 // 配列を追加することで表示されるカードが追加される
 let cards = [
   {
+    image: "/static/images/works/easygantt.png",
+    title:'[EasiGantt.js]シンプルなガントチャートツールを作成',
+    date: '2018/12/16',
+    catLg: 'dev',
+    cat: ['JS','CSS'],
+    body: '現在仕事で社内研修システムの開発のチームリーダーをやっており、そこで使おうと思って作ってみたものです。初めて人に使ってもらうことを意識して、READMEなど丁寧に書いてみました。コピペですぐにWebページに導入できます。',
+    ref: {
+      name: ['GitHub', 'Qiita'],
+      url: ['https://tachibanayu24.github.io/EasyGantt.js/', 'https://qiita.com/tachibanayu24/items/28b4ed4e10263335d0f4'],
+    },
+  },
+  {
     image: "/static/images//works/portfolio.png",
     title:'Reactでポートフォリオ作成',
     date: '2018/10/10',
