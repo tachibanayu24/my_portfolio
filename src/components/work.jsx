@@ -14,7 +14,7 @@ import Typography from '@material-ui/core/Typography';
 let cards = [
   {
     image: "/static/images/works/easygantt.png",
-    title:'[EasiGantt.js]シンプルなガントチャートツールを作成',
+    title:'[EasyGantt.js]シンプルなガントチャートツールを作成',
     date: '2018/12/16',
     catLg: 'dev',
     cat: ['JS','CSS'],
