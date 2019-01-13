@@ -13,6 +13,18 @@ import Typography from '@material-ui/core/Typography';
 // 配列を追加することで表示されるカードが追加される
 let cards = [
   {
+    image: "/static/images/works/kintone-pj.png",
+    title:'個人事業で業務改善プロジェクト受注',
+    date: '2019/1/13',
+    catLg: 'dev',
+    cat: ['kintoneAPI','JS', 'コンサル'],
+    body: 'とあるベンチャー企業から業務システム改善の案件を受注しました。初めて個人の仕事で報酬を受け取ります。Spreadsheetで管理している情報を、DBにkintoneを用いたアプリケーションに移行して従来より効率的なシステムの実現を目指すプロジェクトです。提案からリリースまでを一括で請け負います。',
+    ref: {
+      name: [],
+      url: [],
+    },
+  },
+  {
     image: "/static/images/works/easygantt.png",
     title:'[EasyGantt.js]シンプルなガントチャートツールを作成',
     date: '2018/12/16',
@@ -145,7 +157,7 @@ const chipsStyle = {
 // cards.refs.nameの値によってbuttonの色を変える
 const refs = (name, url) => {
   if(name === undefined || name === '' ) {
-  } else if(name === '準備中' || name === '停止中') {
+  } else if(name === '準備中' || name === '停止中' || name === 'なし') {
     return (
       <Button size="small" style={{...refsStyle, backgroundColor: 'grey'}}>
         {name}
