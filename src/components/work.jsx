@@ -13,6 +13,18 @@ import Typography from '@material-ui/core/Typography';
 // 配列を追加することで表示されるカードが追加される
 let cards = [
   {
+    image: "/static/images/works/perches.png",
+    title:'プログラミングサークル活動開始',
+    date: '2019/2/11',
+    catLg: 'other',
+    cat: [],
+    body: '月1程度集まってコードを書くサークルを作りました。主に会社の同期が10名ほどいる小規模でゆるい自称サークルです。仲良く楽しくやっていきます。',
+    ref: {
+      name: ['サイトへ'],
+      url: ['https://perches-team.github.io/perches/'],
+    },
+  },
+  {
     image: "/static/images/works/kintone-pj.png",
     title:'個人事業で業務改善プロジェクト受注',
     date: '2019/1/13',
@@ -115,7 +127,7 @@ let cards = [
     title:'#100DaysOfCode 開始！',
     date: '2018/8/1',
     catLg: 'other',
-    cat: ['','','',],
+    cat: [],
     body: '100日間コーディングをしてTwitterで報告するという、マラソンのような活動を始めます。最初80日はインプットしつつ月1ペースでなにか作り、最後20日くらいで自分のWebサービスを作りたい。',
     ref: {
       name: ['ツイート一覧', '', '',],

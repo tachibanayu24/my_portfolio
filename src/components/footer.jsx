@@ -10,7 +10,7 @@ const Footer = () => {
   return(
     <footer>
     <p><FontAwesomeIcon className="icon fa" icon="heart" style={{marginRight: 5, color: '#FF1493'}} />
-      Last-Modified: 2019/1/13
+      Last-Modified: 2019/2/11
     </p>
   </footer>
   );
