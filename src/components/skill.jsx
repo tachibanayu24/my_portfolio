@@ -15,8 +15,8 @@ const Skill = () => {
         <Grid container>
           <Grid item lg={1} md={1}></Grid>
           <Grid item lg={2} md={2} xs={4} className="skills">
-            <FontAwesomeIcon icon={['fab', 'html5']} className="icons fa-4x" style={{ color: '#EA6227' }} />
-            <FontAwesomeIcon icon={['fab', 'css3-alt']} className="icons fa-4x" style={{ color: '#3498D0' }} />
+            <FontAwesomeIcon icon={['fab', 'html5']} className="icons fa-3x" style={{ color: '#EA6227' }} />
+            <FontAwesomeIcon icon={['fab', 'css3-alt']} className="icons fa-3x" style={{ color: '#3498D0' }} />
             <span className="skill-name">HTML/CSS</span>
             <span className="skill-details">
               まずまずわかると思います
@@ -24,14 +24,14 @@ const Skill = () => {
           </Grid>
           <Grid item lg={2} md={2} xs={4} className="skills">
             <FontAwesomeIcon icon={['fab', 'js']} className="icons fa-4x" style={{ color: '#FFD700' }} />
-            <span className="skill-name">JavaScript(TypeScript)</span>
+            <span className="skill-name">JavaScript<br />/TypeScript</span>
             <span className="skill-details">
               Webアプリ開発でよく書きます
             </span>
           </Grid>
           <Grid item lg={2} md={2} xs={4} className="skills">
-            <FontAwesomeIcon icon={['fab', 'react']} className="icons fa-4x" style={{ color: '#1E90FF' }} />
-            <FontAwesomeIcon icon={['fab', 'vuejs']} className="icons fa-4x" style={{ color: '#3FB280' }} />
+            <FontAwesomeIcon icon={['fab', 'react']} className="icons fa-3x" style={{ color: '#1E90FF' }} />
+            <FontAwesomeIcon icon={['fab', 'vuejs']} className="icons fa-3x" style={{ color: '#3FB280' }} />
             <span className="skill-name">React/Vue</span>
             <span className="skill-details">
               仕事で使ったり趣味で勉強したり
