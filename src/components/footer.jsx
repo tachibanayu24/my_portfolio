@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Divider from '@material-ui/core/Divider';
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -7,12 +9,14 @@ library.add(faHeart);
 
 // 最終更新日を入力する
 const Footer = () => {
-  return(
+  return (
     <footer>
-    <p><FontAwesomeIcon className="icon fa" icon="heart" style={{marginRight: 5, color: '#FF1493'}} />
-      Last-Modified: 2019/2/11
-    </p>
-  </footer>
+      <Divider />
+      <p><FontAwesomeIcon className="icon fa" icon="heart" style={{ marginRight: 5, color: '#FF1493' }} />
+        Last-Modified: 2019/3/24
+      </p>
+      <p>本ページでは、利用状況を把握するためにGoogle Analyticsを利用しています。</p>
+    </footer>
   );
 }
 
