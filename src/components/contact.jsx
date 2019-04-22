@@ -14,8 +14,8 @@ const Header = () => {
       <div className="sub-content-body" style={{textAlign: 'center', marginTop: 20}}>
         <Grid container>
           <Grid item lg={12} md={12} xs={12}>
-            <span style={{color: '#2F4F4F', fontSize: 12}}>面談や受諾開発など、お気軽にお問合せください<br />
-            Twitterかメールでご連絡いただけると嬉しいです
+            <span>現在転職や受諾開発は考えていませんが、話してみたいなどあれば是非！<br />
+            Twitterかメールでご連絡いただけると嬉しいです。
             </span>
           </Grid>
         </Grid>
@@ -47,7 +47,7 @@ const Header = () => {
         <Grid container>
           <Grid item lg={3} md={3} xs={1}></Grid>
           <Grid item lg={6} md={6} xs={10}>
-              <FontAwesomeIcon className="icons fa-lg" icon='envelope' style={{color: '#FF4500'}} />
+              <FontAwesomeIcon className="icons fa-lg" icon='envelope' style={{marginRight: 5, color: '#FF4500'}} />
               <span style={{fontSize: 13, color: 'grey'}}>tachibanayu24<FontAwesomeIcon className="icon fa" icon='at' />gmail.com</span>
           </Grid>
           <Grid item lg={3} md={3} xs={1}></Grid>

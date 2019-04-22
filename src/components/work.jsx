@@ -13,6 +13,18 @@ import Typography from '@material-ui/core/Typography';
 // 配列を追加することで表示されるカードが追加される
 let cards = [
   {
+    image: "/static/images/works/metapring.png",
+    title:'株式会社pringに転職',
+    date: '2019/4/22',
+    catLg: 'other',
+    cat: [],
+    body: 'NTTグループを退職し、5/15よりメタップスグループのpringという会社で働きます。「お金から、なかよく。」を合言葉に、お金コミュニケーションアプリのpringを開発します。',
+    ref: {
+      name: ['サービスのランディングページ'],
+      url: ['https://www.pring.jp/'],
+    },
+  },
+  {
     image: "/static/images/works/perches.png",
     title:'プログラミングサークル活動開始',
     date: '2019/2/11',

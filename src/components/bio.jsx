@@ -26,16 +26,11 @@ class Introduce extends Component {
     return(
       <>
         <p>
-          ポートフォリオを見ていただきありがとうございます。<br />
-          立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">@tachibanayu24</a>)です！
+          エンジニア立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">@tachibanayu24</a>)の活動記録です。
         </p>
         <p>
-          ものづくりが好きなのでプライベートでよくコーディングしているエンジニアです。<br />
-          まだまだ初心者ですが、一人称でサービス開発に携われるような技術を身につけることを目指して日々勉強しています。
-        </p>
-        <p>家庭の事情で高校を中退し肉体労働者になりましたが、お金をためて高卒認定を取得。都内の大学(工学部)へ進学しました。<br />
-          大学に通いながらベンチャー企業で3年間サービス運用、業務改善、採用活動とマルチに働いていました。<br />
-          2018年4月に港区の大手通信系SIerに新卒入社し、新規ビジネス開発の仕事をしています。
+          駆け出しエンジニアとして日々勉強しています！<br />
+          メインで書くのはRubyやPHPで、最近好きなのはAngular.jsです。
         </p>
       </>
     );

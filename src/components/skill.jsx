@@ -4,8 +4,8 @@ import ContentTitle from './contentTitle';
 import Grid from '@material-ui/core/Grid';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab, faHtml5, faCss3Alt, faJs, faReact, faVuejs, faJava, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
-library.add(fab, faHtml5, faCss3Alt, faJs, faReact, faVuejs, faJava, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub);
+import { fab, faHtml5, faCss3Alt, faJs, faAngular, faReact, faVuejs, faJava, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+library.add(fab, faHtml5, faCss3Alt, faJs, faAngular, faReact, faVuejs, faJava, faAws, faSlackHash, faLinux, faTwitter, faInstagram, faGithub);
 
 const Skill = () => {
   return (
@@ -24,15 +24,16 @@ const Skill = () => {
           </Grid>
           <Grid item lg={2} md={2} xs={4} className="skills">
             <FontAwesomeIcon icon={['fab', 'js']} className="skill-icon icons fa-4x" style={{ color: '#FFD700' }} />
-            <span className="skill-name">JavaScript<br />/TypeScript</span>
+            <span className="skill-name">JS(TS)</span>
             <span className="skill-details">
               Webアプリ開発でよく書きます
             </span>
           </Grid>
           <Grid item lg={2} md={2} xs={4} className="skills">
-            <FontAwesomeIcon icon={['fab', 'react']} className="skill-icon icons fa-3x" style={{ color: '#1E90FF' }} />
-            <FontAwesomeIcon icon={['fab', 'vuejs']} className="skill-icon icons fa-3x" style={{ color: '#3FB280' }} />
-            <span className="skill-name">React/Vue</span>
+            <FontAwesomeIcon icon={['fab', 'angular']} className="skill-icon icons fa-2x" style={{ color: '#E23237' }} />
+            <FontAwesomeIcon icon={['fab', 'react']} className="skill-icon icons fa-2x" style={{ color: '#1E90FF' }} />
+            <FontAwesomeIcon icon={['fab', 'vuejs']} className="skill-icon icons fa-2x" style={{ color: '#3FB280' }} />
+            <span className="skill-name" style={{fontSize: 10}}>Angular/React/Vue</span>
             <span className="skill-details">
               仕事で使ったり趣味で勉強したり
             </span>

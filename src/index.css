@@ -28,13 +28,14 @@ body {
 }
 
 /* コンテンツのタイトルのアイコンと文字の間 */
-.icons {
-  margin-right: 10px;
-}
 
 .sub-content {
   padding: 5px;
   margin: 5px;
+}
+
+.content-title-icon {
+  margin-right: 7px;
 }
 
 .content-title {
@@ -114,4 +115,8 @@ footer {
 
 .skill-icon {
   height: 45.5px;
+}
+
+.ga-description {
+  font-size: 10px;
 }

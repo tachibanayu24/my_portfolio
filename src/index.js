@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 // import Custom Components
 import Header from './components/header';
 import Bio from './components/bio';
+import History from './components/history';
 import Skill from './components/skill';
 import Work from './components/work';
 import Contact from './components/contact';
@@ -19,6 +20,7 @@ ReactDOM.render(
     <Animated className="body-animation" animationIn="fadeIn" isVisible={true}>
       <main>
         <Bio />
+        <History />
         <Skill />
         <Work />
         <Contact />
