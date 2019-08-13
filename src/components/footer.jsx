@@ -13,7 +13,7 @@ const Footer = () => {
     <footer>
       <Divider />
       <p><FontAwesomeIcon className="icon fa" icon="heart" style={{ marginRight: 5, color: '#FF1493' }} />
-        Last-Modified: 2019/4/22
+        Last-Modified: 2019/8/7
       </p>
       <p className="ga-description">本ページでは、利用状況を把握するためにGoogle Analyticsを利用しています。</p>
     </footer>

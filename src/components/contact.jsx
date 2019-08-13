@@ -14,15 +14,13 @@ const Header = () => {
       <div className="sub-content-body" style={{textAlign: 'center', marginTop: 20}}>
         <Grid container>
           <Grid item lg={12} md={12} xs={12}>
-            <span>現在転職や受諾開発は考えていませんが、話してみたいなどあれば是非！<br />
-            Twitterかメールでご連絡いただけると嬉しいです。
-            </span>
+            <span>Twitterかメールでお気軽にご連絡いただけると嬉しいです。</span>
           </Grid>
         </Grid>
         <Grid container style={{marginTop: 20}}>
           <Grid item lg={4} md={4} xs={2}></Grid>
           <Grid item lg={1} md={1} xs={2}>
-            <a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/tachibanayu24_" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon className="icons fa-2x" icon={['fab', 'twitter']} style={{color: '#1E90FF'}} />
             </a>
           </Grid>

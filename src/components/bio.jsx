@@ -26,11 +26,11 @@ class Introduce extends Component {
     return(
       <>
         <p>
-          エンジニア立花優斗(<a href="https://twitter.com/tachibanayu24" target="_blank" rel="noopener noreferrer">@tachibanayu24</a>)の活動記録です。
+          エンジニア立花優斗(<a href="https://twitter.com/tachibanayu24_" target="_blank" rel="noopener noreferrer">@tachibanayu24_</a>)の活動記録です。
         </p>
         <p>
-          駆け出しエンジニアとして日々勉強しています！<br />
-          メインで書くのはRubyやPHPで、最近好きなのはAngular.jsです。
+          駆け出しエンジニアとして日々勉強しています。<br />
+          メインで書くのはRubyやReact.jsです。
         </p>
       </>
     );
